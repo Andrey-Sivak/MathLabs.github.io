@@ -1,0 +1,63 @@
+%flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  @extend %flex;
+  padding: 14px 0;
+  font-weight: 600;
+  font-size: 15px;
+
+  &_left {
+    @extend %flex;
+    max-width: 404px;
+    width: 100%;
+
+    & .white-btn {
+      padding: 15px 19px 15px 44px;
+      border-radius: 50px;
+      background-image: url("../img/lt-arrow.svg");
+      background-position: 19px center;
+      background-repeat: no-repeat;
+
+      &:hover {
+
+      }
+    }
+  }
+
+  &_right {
+    @extend %flex;
+    width: 100%;
+    max-width: 718px;
+
+    &__phone {
+      font-size: 22px;
+      color: #000;
+      border-bottom: 2px solid #fff;
+      transition: all ease-in .3s;
+
+      &:hover {
+        border-bottom-color: #000;
+      }
+    }
+
+    & .purple-btn {
+      padding: 15px 35px;
+      border-radius: 50px ;
+    }
+
+    &__login-btn {
+      width: 73px;
+      text-align: right;
+      font-weight: 400;
+      background-image: url("../img/account.svg");
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: contain;
+      padding: 3px 0;
+    }
+  }
+}
