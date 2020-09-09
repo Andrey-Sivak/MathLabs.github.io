@@ -1,0 +1,15 @@
+@mixin font-face($path, $family, $type, $weight, $style: normal) {
+  @font-face {
+    font-family: $family;
+    src: url('#{$path}#{$type}.ttf') format('truetype');
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+$dir: '../fonts';
+$muller: 'Muller';
+
+@include font-face('#{$dir}/#{$muller}', $muller, '-Regular', 400);
+@include font-face('#{$dir}/#{$muller}', $muller, '-Medium', 500);
+@include font-face('#{$dir}/#{$muller}', $muller, '-Bold', 600);
