@@ -6,14 +6,21 @@
     align-items: center;
     width: 100%;
     opacity: 0;
+    margin-top: 50px;
 
     &.animate__fadeInUp {
       opacity: 1;
     }
 
-    &__img {
+    &__img-wrap {
       flex: 0 0 50%;
-      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__img {
+      width: 60%;
     }
 
     &__content {
@@ -38,7 +45,7 @@
 
     &:nth-child(even) {
 
-      .how-we-preparing_item__img {
+      .how-we-preparing_item__img-wrap {
         order: 2;
       }
     }
