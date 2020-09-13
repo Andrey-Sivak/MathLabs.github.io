@@ -16,7 +16,8 @@
     "jquery": "^3.4.1",
     "npm-check-updates": "^4.1.1",
     "owl.carousel": "^2.3.4",
-    "smoothscroll-polyfill": "^0.4.4"
+    "smoothscroll-polyfill": "^0.4.4",
+    "wowjs": "^1.1.3"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

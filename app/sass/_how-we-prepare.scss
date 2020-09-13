@@ -5,6 +5,11 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    opacity: 0;
+
+    &.animate__fadeInUp {
+      opacity: 1;
+    }
 
     &__img {
       flex: 0 0 50%;

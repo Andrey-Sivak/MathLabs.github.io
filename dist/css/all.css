@@ -220,7 +220,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%; }
+  width: 100%;
+  opacity: 0; }
+  .how-we-preparing_item.animate__fadeInUp {
+    opacity: 1; }
   .how-we-preparing_item__img {
     flex: 0 0 50%;
     height: auto; }
