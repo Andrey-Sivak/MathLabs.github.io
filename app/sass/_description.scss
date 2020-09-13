@@ -1,0 +1,16 @@
+.description {
+  max-width: 1010px;
+  margin: 120px auto;
+  font-size: 32px;
+  font-weight: 400;
+  color: #141D30;
+  line-height: 42px;
+
+  & p:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  & p .note {
+    color: $green-color;
+  }
+}

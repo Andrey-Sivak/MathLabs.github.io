@@ -1,0 +1,100 @@
+.main-form {
+  position: relative;
+  padding: 120px 0 100px;
+  background-image: url("../img/form-bg.svg");
+  background-size: cover;
+  background-position: center;
+
+  &_img1,
+  &_img2 {
+    position: absolute;
+  }
+
+  &_img1 {
+    left: 0;
+    bottom: -115px;
+  }
+
+  &_img2 {
+    right: 0;
+    top: -100px;
+  }
+
+  & .section-caption {
+    padding-right: 51px;
+    position: relative;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+
+    &:after {
+      position: absolute;
+      content: '';
+      width: 36px;
+      height: 36px;
+      top: -5px;
+      right: 0;
+      background-image: url("../img/form-caption-smile.png");
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  &_subcaption {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+    color: $grey-color;
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &_form {
+    width: 100%;
+    max-width: 910px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 30px auto 0 auto;
+
+    &__form-group {
+      width: 290px;
+    }
+
+    &__label {
+      display: none;
+    }
+
+    &__input {
+      border-radius: 8px;
+      background-color: #fff;
+      border: none;
+      font-size: 18px;
+      padding: 16px 24px;
+      color: $grey-color;
+      width: 100%;
+    }
+
+    & .purple-btn {
+      width: 100%;
+      padding: 16px 0;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 55px;
+      margin-bottom: 10px;
+    }
+
+    &__btn-note {
+      font-size: 11px;
+      text-align: center;
+      color: $grey-color;
+
+      &--link {
+        color: $purple-color;
+      }
+    }
+  }
+}

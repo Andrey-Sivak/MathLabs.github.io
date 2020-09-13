@@ -1,0 +1,41 @@
+.how-we-preparing {
+
+  &_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    &__img {
+      flex: 0 0 50%;
+      height: auto;
+    }
+
+    &__content {
+
+      & .base-caption {
+        text-align: left;
+      }
+    }
+
+    &__text {
+      font-size: 20px;
+      line-height: 30px;
+      color: $black-color;
+      opacity: .7;
+      font-weight: 400;
+      margin-top: 30px;
+
+      & .note {
+        font-weight: 600;
+      }
+    }
+
+    &:nth-child(even) {
+
+      .how-we-preparing_item__img {
+        order: 2;
+      }
+    }
+  }
+}

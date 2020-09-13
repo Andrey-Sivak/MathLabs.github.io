@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("window.addEventListener('load', function () {\n  console.log(1);\n});\n\n//# sourceURL=webpack:///./app/js/main.js?");
+eval("window.addEventListener('load', function () {\n  $('.personal_slider').owlCarousel({\n    loop: true,\n    items: 1,\n    dots: false,\n    navContainerClass: 'personal_slider__arrows',\n    navClass: ['personal_slider__arr personal_slider__arr-lt;', 'personal_slider__arr personal_slider__arr-rt;']\n  });\n\n  function showHideContent(arrayId) {\n    let items = document.getElementById(arrayId).children; // let items = document.getElementsByClassName('program_item');\n\n    items = Array.prototype.slice.call(items);\n    items.forEach(function (item) {\n      item.addEventListener('click', function (e) {\n        e.preventDefault();\n\n        if (this.classList.contains('active')) {\n          this.classList.remove('active');\n        } else {\n          this.classList.add('active');\n        }\n\n        const self = this;\n        items.forEach(function (elem) {\n          if (elem !== self) {\n            if (elem.classList.contains('active')) {\n              elem.classList.remove('active');\n            }\n          }\n        });\n      });\n    });\n  }\n\n  showHideContent('programs');\n  showHideContent('q-a-wrap');\n});\n\n//# sourceURL=webpack:///./app/js/main.js?");
 
 /***/ })
 

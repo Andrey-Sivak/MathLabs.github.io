@@ -1,0 +1,37 @@
+.main-offer {
+  background-color: $purple-color;
+  padding: 155px 0 152px;
+  color: #fff;
+
+  &_caption {
+    max-width: 700px;
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 100%;
+  }
+
+  &_subcaption {
+    font-weight: 400;
+    font-size: 24px;
+    max-width: 600px;
+    line-height: 34px;
+    margin: 30px 0;
+  }
+
+  & .green-btn {
+    padding: 15px 0;
+    width: 300px;
+    text-align: center;
+    border-radius: 55px;
+  }
+
+  & .container {
+    position: relative;
+  }
+
+  &_img {
+    position: absolute;
+    top: -58px;
+    right: -30px;
+  }
+}

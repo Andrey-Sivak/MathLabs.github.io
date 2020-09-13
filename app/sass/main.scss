@@ -20,6 +20,7 @@ a {
 }
 body {
   font-family: $muller;
+  color: $black-color;
 }
 
 .container {
@@ -29,45 +30,76 @@ body {
 
 // buttons styles
 
-%animate {
+%button {
+  display: block;
   transition: all ease-in .3s;
 }
 
 .white-btn {
-  @extend %animate;
-  color: $main-color;
-  border: 1px solid $main-color;
+  @extend %button;
+  color: $purple-color;
+  border: 1px solid $purple-color;
   background-color: #fff;
 
   &:hover {
     border-color: #fff;
-    background-color: $main-color;
+    background-color: $purple-color;
     color: #fff;
   }
 }
 .simple-btn {
-  @extend %animate;
-  color: $main-color;
+  @extend %button;
+  color: $purple-color;
   border-bottom: 2px solid #fff;
 
   &:hover {
-    border-bottom-color: $main-color;
+    border-bottom-color: $purple-color;
   }
 }
 .purple-btn {
-  @extend %animate;
+  @extend %button;
   color: #fff;
-  background-color: $main-color;
+  background-color: $purple-color;
   border: 1px solid #fff;
 
   &:hover {
-    color: $main-color;
+    color: $purple-color;
     background-color: #fff;
-    border-color: $main-color;
+    border-color: $purple-color;
   }
 }
 .green-btn {
-  @extend %animate;
+  @extend %button;
   color: #fff;
-  background-color: $second-color;
+  background-color: $green-color;
+  border: 1px solid $green-color;
+
+  &:hover {
+    color: $green-color;
+    background-color: #fff;
+    border-color: $green-color;
+  }
 }
+
+// end buttons styles
+
+// captions styles
+
+%caption {
+  text-align: center;
+  font-weight: 600;
+}
+
+.section-caption {
+  @extend %caption;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.base-caption {
+  @extend %caption;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+// end captions styles

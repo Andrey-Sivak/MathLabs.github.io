@@ -1,0 +1,43 @@
+.why-now {
+  background-image: url("../img/why-now-bg.svg");
+  padding: 120px 0 150px;
+  background-size: cover;
+  background-position: left bottom;
+  position: relative;
+
+  &_bg {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 750px;
+  }
+
+  &_content {
+    max-width: 600px;
+    color: #fff;
+  }
+
+  &_caption {
+    font-size: 40px;
+    line-height: 110%;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+
+  &_text {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+
+  & .green-btn {
+    width: 286px;
+    text-align: center;
+    padding: 18px 0;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,123 @@
+.personal {
+  margin-bottom: 124px;
+
+  &_slider {
+    margin-top: 30px;
+
+    &__arrows  {
+      position: absolute;
+      right: 0;
+      top: -36px;
+      transform: translateY(-100%);
+      display: flex;
+      width: 88px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__arr {
+      width: 29px;
+      height: 29px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      cursor: pointer;
+      background-color: #fff;
+      border: none;
+
+      &:focus {
+        outline: none;
+      }
+
+      & span {
+        display: none;
+      }
+
+      &:first-child {
+        background-image: url("../img/slider-lt-arr.svg");
+      }
+
+      &:last-child {
+        background-image: url("../img/slider-rt-arr.svg");
+      }
+    }
+  }
+
+  &_slide {
+    width: 100%;
+    display: flex;
+    padding: 67px 103px 60px 62px;
+    justify-content: space-between;
+    align-items: center;
+    border: 4px solid #F1F4FF;
+    background-color: #fff;
+    border-radius: 8px;
+
+    &__img-wrap {
+      flex: 0 0 50%;
+      display: flex;
+      align-items: center;
+    }
+
+    &__img {
+      max-width: 85%;
+      height: auto;
+    }
+
+    &__content {
+      max-width: 495px;
+    }
+
+    &__caption {
+      margin-bottom: 12px;
+      font-size: 32px;
+      line-height: 32px;
+      font-weight: 600;
+    }
+
+    &__position {
+      margin-bottom: 30px;
+      font-weight: 500;
+      line-height: 20px;
+      font-size: 20px;
+      position: relative;
+      width: fit-content;
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        background-image: url("../img/mgu-logo.png");
+        background-repeat: no-repeat;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -44px;
+      }
+    }
+
+    &__text {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+      color: $grey-color;
+      margin-bottom: 30px;
+    }
+
+    &__results-wrap {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__results-name {
+      font-size: 15px;
+      color: $grey-color;
+      margin-bottom: 5px;
+    }
+
+    &__results-value {
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+}

@@ -1,0 +1,84 @@
+.how-learning {
+  margin-top: 122px;
+  margin-bottom: 120px;
+
+  &_stages {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  &_stage {
+    flex: 0 0 calc( (100% - 20px * 3) / 4 );
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    &__img-wrap {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background-color: #F1F4FF;
+    }
+
+    &__img {
+      max-width: 64px;
+      max-height: 64px;
+    }
+
+    &__text {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 26px;
+      color: $grey-color;
+
+      & .note {
+        font-weight: 600;
+      }
+    }
+  }
+
+  &_counter {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    &__item {
+      flex: 0 0 calc( (100% - 20px * 3) / 4 );
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $purple-color;
+      font-size: 20px;
+      font-weight: 600;
+      position: relative;
+
+      &:not(:last-child):after {
+        content: '';
+        position: absolute;
+        height: 1px;
+        background-color: #DFE6FF;
+        top: 50%;
+        transform: translateY(-50%);
+        left: calc( 50% + 20px );
+        width: calc( 100% - 20px );
+      }
+
+      & span {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        border: 1px solid #DFE6FF;
+      }
+    }
+  }
+}
