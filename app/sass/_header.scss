@@ -15,6 +15,11 @@
     max-width: 404px;
     width: 100%;
 
+    @include tablet {
+      width: unset;
+      margin-right: 20px;
+    }
+
     & .white-btn {
       padding: 15px 19px 15px 44px;
       border-radius: 50px;
@@ -25,6 +30,13 @@
       &:hover {
 
       }
+
+      @include tablet {
+        font-size: 0;
+        padding: 22px;
+        background-position: center;
+        margin-left: 20px;
+      }
     }
   }
 
@@ -32,6 +44,14 @@
     @extend %flex;
     width: 100%;
     max-width: 718px;
+
+    @include tablet {
+      display: none;
+    }
+
+    @include mobile {
+      display: none;
+    }
 
     &__phone {
       font-size: 22px;
@@ -58,6 +78,7 @@
       background-position: left center;
       background-size: contain;
       padding: 3px 0;
+      color: $black-color;
     }
   }
 }

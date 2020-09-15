@@ -5,19 +5,46 @@
   background-size: cover;
   background-position: center;
 
+  @include tablet {
+    padding: 80px 0;
+  }
+
+  @include mobile {
+    padding: 60px 0;
+  }
+
   &_img1,
   &_img2 {
     position: absolute;
+
+    @include tablet {
+      width: 190px;
+      bottom: -89px;
+    }
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &_img1 {
     left: 0;
     bottom: -115px;
+
+    @include small-pc {
+      width: 190px;
+      bottom: -100px;
+    }
   }
 
   &_img2 {
     right: 0;
     top: -100px;
+
+    @include tablet {
+      top: unset;
+      bottom: -99px;
+    }
   }
 
   & .section-caption {
@@ -37,6 +64,17 @@
       background-image: url("../img/form-caption-smile.png");
       background-size: cover;
       background-position: center;
+
+      @include mobile {
+        width: 24px;
+        height: 24px;
+        top: -24px;
+      }
+    }
+
+    @include mobile {
+      text-align: center;
+      padding-right: 0;
     }
   }
 
@@ -50,6 +88,16 @@
     max-width: 800px;
     margin-right: auto;
     margin-left: auto;
+
+    @include tablet {
+      font-size: 20px;
+      max-width: 85%;
+    }
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 123%;
+    }
   }
 
   &_form {
@@ -60,8 +108,29 @@
     align-items: flex-start;
     margin: 30px auto 0 auto;
 
+    @include mobile {
+      margin-top: 18px;
+    }
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
+
     &__form-group {
       width: 290px;
+
+      @include tablet {
+        width: 370px;
+      }
+
+      @include mobile {
+        width: 290px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
     }
 
     &__label {
@@ -85,6 +154,13 @@
       font-weight: 600;
       border-radius: 55px;
       margin-bottom: 10px;
+
+      @include tablet {
+        width: 290px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
 
     &__btn-note {

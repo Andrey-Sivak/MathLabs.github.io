@@ -3,12 +3,28 @@
   padding: 52px 0 70px;
   color: #fff;
 
+  @include tablet {
+    padding: 60px 0 35px;
+  }
+
+  @include mobile {
+    padding: 40px 0;
+  }
+
   &_top {
     display: flex;
     width: 100%;
     max-width: 100%;
     justify-content: space-between;
     margin-bottom: 145px;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+
+    @include mobile {
+      flex-direction: column;
+    }
 
     &__caption {
       font-weight: 600;
@@ -23,20 +39,41 @@
       max-width: 520px;
       font-size: 20px;
       line-height: 20px;
+
+      @include tablet {
+        font-size: 14px;
+        max-width: 305px;
+      }
     }
 
     &__right {
       max-width: 272px;
+
+      @include mobile {
+        max-width: unset;
+      }
+
+      @include mobile {
+        margin-top: 60px;
+      }
     }
 
     &__soc-icons {
       margin-top: 32px;
       display: flex;
+
+      @include mobile {
+        justify-content: space-around;
+      }
     }
 
     &__soc-icon--link {
       display: block;
       margin-right: 16px;
+
+      @include mobile{
+        margin-right: 0;
+      }
     }
   }
 
@@ -46,10 +83,34 @@
     max-width: 100%;
     justify-content: space-between;
     font-size: 16px;
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    @include mobile {
+      margin-top: 60px;
+    }
+
+    &__item {
+
+      @include tablet {
+        order: 3;
+      }
+
+      @include mobile {
+        font-size: 14px;
+        line-height: 14px;
+      }
+    }
     
     &__link {
       color: #fff;
       text-decoration: underline;
+
+      @include tablet {
+        margin-bottom: 32px;
+      }
 
       &:hover {
         text-decoration: none;

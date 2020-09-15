@@ -1,3 +1,21 @@
+@mixin small-pc {
+  @media(max-width: $small-pc) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media(max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media(max-width: $mobile) {
+    @content;
+  }
+}
+
 @import 'index';
 
 body,
@@ -26,6 +44,16 @@ body {
 .container {
   max-width: $container;
   margin: 0 auto;
+
+  @include small-pc {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include tablet {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 // buttons styles
@@ -94,12 +122,32 @@ body {
   @extend %caption;
   font-size: 40px;
   line-height: 40px;
+
+  @include tablet {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  @include mobile {
+    font-size: 24px;
+    line-height: 24px;
+    text-align: left;
+  }
 }
 
 .base-caption {
   @extend %caption;
   font-size: 30px;
   line-height: 30px;
+
+  @include mobile {
+    font-size: 18px;
+    line-height: 18px;
+  }
 }
 
 // end captions styles
+
+main, footer {
+  //display: none;
+}

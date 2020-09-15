@@ -2,11 +2,29 @@
   margin-top: 122px;
   margin-bottom: 120px;
 
+  @include tablet {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+
+  @include mobile {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
   &_stages {
     margin-top: 60px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
+
+    @include tablet {
+      flex-wrap: wrap;
+    }
+
+    @include mobile {
+      margin-top: 0;
+    }
   }
 
   &_stage {
@@ -15,6 +33,26 @@
     flex-direction: column;
     text-align: center;
     align-items: center;
+
+    @include tablet {
+      flex: 0 0 calc( (100% - 19px) / 2 );
+    }
+
+    @include mobile {
+      margin-top: 30px;
+      flex: 0 0 100%;
+    }
+
+    &:nth-child(-n+2) {
+
+      @include tablet {
+        margin-bottom: 60px;
+      }
+
+      @include mobile {
+        margin-bottom: 0;
+      }
+    }
 
     &__img-wrap {
       width: 100px;
@@ -38,6 +76,10 @@
       line-height: 26px;
       color: $grey-color;
 
+      @include mobile {
+        font-size: 16px;
+      }
+
       & .note {
         font-weight: 600;
       }
@@ -48,6 +90,10 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+
+    @include tablet {
+      display: none;
+    }
 
     &__item {
       flex: 0 0 calc( (100% - 20px * 3) / 4 );

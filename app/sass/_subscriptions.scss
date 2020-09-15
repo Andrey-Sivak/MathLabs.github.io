@@ -4,8 +4,16 @@
   background-repeat: no-repeat;
   background-size: contain;
 
+  @include tablet {
+    padding: 80px 0;
+  }
+
   & .section-caption {
     margin-bottom: 60px;
+
+    @include mobile {
+      margin-bottom: 30px;
+    }
   }
 
   & .container {
@@ -16,6 +24,11 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &_case {
@@ -24,6 +37,19 @@
     background-color: #fff;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     border-radius: 8px;
+
+    @include small-pc {
+      max-width: 49%;
+    }
+
+    @include tablet {
+      max-width: 63%;
+    }
+
+    @include mobile {
+      max-width: 100%;
+      padding: 30px 23px 30px 30px;
+    }
 
     & .base-caption {
       margin-bottom: 15px;
@@ -34,6 +60,10 @@
       font-size: 24px;
       font-weight: 600;
       width: fit-content;
+
+      @include mobile {
+        font-size: 14px;
+      }
 
       & .old-coast {
         color: $black-color;
@@ -55,6 +85,11 @@
       color: $grey-color;
       position: relative;
 
+      @include mobile {
+        font-size: 10px;
+        line-height: 13px;
+      }
+
       &:before {
         content: '';
         width: 24px;
@@ -63,10 +98,23 @@
         left: -35px;
         top: 15px;
         background-image: url("../img/dis-icon.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @include mobile {
+          width: 8.4px;
+          height: 8.4px;
+          left: -20px;
+        }
       }
 
       &-active:before {
         background-image: url("../img/check-icon.svg");
+
+        @include mobile {
+          width: 12px;
+          height: 8px;
+        }
       }
 
       &:not(:last-child) {
@@ -86,6 +134,10 @@
     margin-left: auto;
     margin-right: auto;
 
+    @include mobile {
+      padding-left: 24px;
+    }
+
     &:before {
       background-size: cover;
       content: '';
@@ -93,10 +145,23 @@
       left: 0;
       width: 24px;
       height: 24px;
+
+      @include mobile {
+        width: 14px;
+        height: 14px;
+      }
     }
   }
 
   &_basic {
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+
+    @include mobile{
+      margin-bottom: 30px;
+    }
 
     & .base-caption {
       @extend %base-caption;
@@ -115,6 +180,10 @@
     padding-top: 92px;
     position: relative;
 
+    @include mobile {
+      padding-top: 50px;
+    }
+
     &__header {
       position: absolute;
       background-color: $green-color;
@@ -130,6 +199,12 @@
       font-size: 14px;
       font-weight: 600;
       padding: 10px 0 8px;
+
+      @include mobile {
+        padding: 6px 0;
+        font-size: 8px;
+        line-height: 8px;
+      }
     }
 
     & .base-caption {
@@ -152,6 +227,13 @@
     margin: 0 auto;
     padding: 15px 0;
     border-radius: 50px;
+
+    @include mobile {
+      width: 202px;
+      font-size: 12px;
+      line-height: 12px;
+      padding: 10.5px 0;
+    }
   }
 
   &_note {

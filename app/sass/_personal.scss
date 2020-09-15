@@ -1,8 +1,23 @@
 .personal {
   margin-bottom: 124px;
 
+  @include tablet {
+    margin-bottom: 60px;
+  }
+
+  & .section-caption {
+
+    @include tablet {
+      text-align: left;
+    }
+  }
+
   &_slider {
     margin-top: 30px;
+
+    @include mobile {
+      margin-top: 80px;
+    }
 
     &__arrows  {
       position: absolute;
@@ -13,6 +28,12 @@
       width: 88px;
       justify-content: space-between;
       align-items: center;
+
+      @include mobile {
+        right: unset;
+        left: 0;
+        top: -16px;
+      }
     }
 
     &__arr {
@@ -52,10 +73,27 @@
     background-color: #fff;
     border-radius: 8px;
 
+    @include tablet {
+      padding: 60px 10px 60px 20px;
+    }
+
+    @include mobile {
+      padding: 20px 0 60px 0;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      flex-direction: column;
+    }
+
     &__img-wrap {
       flex: 0 0 50%;
       display: flex;
       align-items: flex-start;
+
+      @include mobile {
+        justify-content: center;
+        margin-bottom: 36px;
+      }
     }
 
     &__img {
@@ -74,6 +112,11 @@
       font-size: 32px;
       line-height: 32px;
       font-weight: 600;
+
+      @include tablet {
+        font-size: 20px;
+        line-height: 20px;
+      }
     }
 
     %vuz-icon {
@@ -93,6 +136,12 @@
       font-size: 20px;
       position: relative;
       width: fit-content;
+
+      @include tablet {
+        margin-bottom: 21px;
+        font-size: 14px;
+        line-height: 14px;
+      }
 
       &.mgu:after {
         @extend %vuz-icon;
@@ -117,23 +166,48 @@
       line-height: 30px;
       color: $grey-color;
       margin-bottom: 30px;
+
+      @include tablet {
+        font-size: 15px;
+        line-height: 24px;
+      }
+
+      @include mobile {
+        font-size: 14px;
+      }
     }
 
     &__results-wrap {
       width: 100%;
       display: flex;
       justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    &__results-item {
+
+      @include mobile {
+        width: 50%;
+      }
     }
 
     &__results-name {
       font-size: 15px;
       color: $grey-color;
       margin-bottom: 5px;
+
+      @include mobile {
+        font-size: 11px;
+      }
     }
 
     &__results-value {
       font-size: 20px;
       font-weight: 600;
+
+      @include mobile {
+        font-size: 14px;
+      }
     }
 
     &__olympiads {

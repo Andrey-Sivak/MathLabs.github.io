@@ -1,6 +1,20 @@
 .q-a {
   padding: 120px 0;
 
+  @include tablet {
+    padding: 110px 0 80px;
+  }
+
+  @include mobile {
+    padding: 60px 0;
+  }
+
+  & .section-caption {
+    @include mobile {
+      text-align: center;
+    }
+  }
+
   &_wrap {
     margin: 30px auto 30px auto;
     max-width: 1010px;
@@ -14,6 +28,10 @@
     cursor: pointer;
     position: relative;
 
+    @include mobile {
+      padding: 12px 15px;
+    }
+
     &:after {
       position: absolute;
       content: '';
@@ -24,6 +42,11 @@
       background-size: contain;
       top: 33px;
       right: 30px;
+
+      @include mobile {
+        top: 20px;
+        right: 15px;
+      }
     }
 
     &.active:after {
@@ -41,6 +64,11 @@
       color: rgba(0, 0, 0, 0.9);
       margin-bottom: 0;
       transition: all ease-in .3s;
+
+      @include mobile {
+        font-size: 14px;
+        line-height: 120%;
+      }
     }
 
     &.active &__caption,
@@ -50,6 +78,10 @@
 
     &.active &__caption {
       margin-bottom: 30px;
+
+      @include mobile {
+        margin-bottom: 15px;
+      }
     }
 
     &__text {
@@ -61,6 +93,10 @@
       line-height: 26px;
       color: rgba(0, 0, 0, 0.9);
       font-weight: 400;
+
+      @include mobile {
+        font-size: 15px;
+      }
     }
 
     &.active &__text {
@@ -78,5 +114,9 @@
     padding: 16px 0;
     font-size: 20px;
     line-height: 24px;
+
+    @include mobile {
+      width: 265px;
+    }
   }
 }
