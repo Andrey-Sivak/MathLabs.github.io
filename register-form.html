@@ -12,114 +12,148 @@
 </head>
 <body>
 
-  <header class="container header">
+<header class="container header">
   <div class="header_left">
-    <a href="/" class="header_logo">
+    <a href="./register-form.html" class="header_logo">
       <img src="./dist/img/Logo.svg" alt="MathLabs logotype" class="header_logo__img">
     </a>
     <a href="#" class="white-btn">Вернуться на главную</a>
   </div>
   <div class="header_right">
-    <a href="#" class="simple-btn">Получить консультацию</a>
+    <a href="#" class="simple-btn" id="open-modal">Получить консультацию</a>
     <a href="tel:\\+74994904467" class="header_right__phone">+7 (499) 490-44-67</a>
     <a href="#" class="purple-btn">Записаться</a>
     <a href="#" class="header_right__login-btn">Войти</a>
   </div>
+  <span class="header_burger">
+      <img src="./dist/img/Humburger.svg" alt="img" class="header_burger-img">
+    </span>
 </header>
 
   <main class="registration">
     <div class="container">
-      <div class="registration_info">
-        <p class="section-caption">Регистрируйтесь сейчас и платите меньше!</p>
-        <div class="registration_info__coast">
-          <span class="registration_info__coast-new">1990 p.</span>
-          <span class="registration_info__coast-last">2490 p.</span>
+      <div class="registration_wrap">
+        <div class="registration_info">
+          <p class="section-caption">Хотите успешно сдать ЕГЭ и поступить на бюджет? Сделайте это с MathLabs!</p>
+          <div class="registration_info__coast" id="registration_info__coast">
+            <span class="registration_info__coast-new">1990 p.</span>
+            <span class="registration_info__coast-old">2490 p.</span>
+          </div>
+          <span class="registration_info__promocode">+ 1 бесплатное занятие, через промокод</span>
+          <div class="registration_info__PC-items">
+            <p class="registration_info__item">Занятия ведут преподаватели, сдавшие <span class="note">ЕГЭ на 100 баллов</span> </p>
+            <p class="registration_info__item">Поддержка по решению задач <span class="note">24/7 в Discord и Telegram</span></p>
+            <p class="registration_info__item">Каждую неделю делаем рассылку с решением задач по темам ЕГЭ</p>
+          </div>
         </div>
-        <span class="registration_info__promocode">+ 1 бесплатное занятие, через промокод</span>
-        <p class="registration_info__item">Стоимость снижена <span class="note">до 1 июня 2020 г.</span> </p>
-        <p class="registration_info__item">По окончании мы выдаём <span class="note">сертификат участника</span></p>
-        <p class="registration_info__item">Дарим фирменную футболку MathLabs <span class="note"></span> </p>
-      </div>
 
-      <form action="#" class="registration_form reg-form">
-        <div class="reg-form_formgroup reg-form_checkboxes">
-          <div class="reg-form_checkbox">
-            <p class="reg-form_checkbox__caption">Базовая</p>
-            <p class="reg-form_checkbox__coast">1990 р./мес</p>
-            <p class="reg-form_checkbox__old-coast">2490 р./мес</p>
-            <label for="base-subscript"></label>
-            <input type="checkbox"
-                   name="base-subscript"
-                   id="base-subscript"
-                   hidden>
+        <form action="#" class="registration_form reg-form" id="registration_form">
+          <div class="reg-form_formgroup reg-form_checkboxes">
+            <div class="reg-form_checkbox base active">
+              <p class="reg-form_checkbox__caption">Базовая</p>
+              <p class="reg-form_checkbox__coast">1990 р./мес</p>
+              <p class="reg-form_checkbox__old-coast">2490 р./мес</p>
+              <label for="base-subscript" class="reg-form_checkbox__label"></label>
+              <input type="checkbox"
+                     name="base-subscript"
+                     id="base-subscript"
+                     class="reg-form_checkbox__checkbox"
+                     hidden>
+            </div>
+            <div class="reg-form_checkbox premium">
+              <p class="reg-form_checkbox__caption">Премиум</p>
+              <p class="reg-form_checkbox__coast">2490 р./мес</p>
+              <p class="reg-form_checkbox__old-coast">3490 р./мес</p>
+              <label for="premium-subscript" class="reg-form_checkbox__label"></label>
+              <input type="checkbox"
+                     name="premium-subscript"
+                     id="premium-subscript"
+                     class="reg-form_checkbox__checkbox"
+                     hidden>
+            </div>
           </div>
-          <div class="reg-form_checkbox">
-            <p class="reg-form_checkbox__caption">Премиум</p>
-            <p class="reg-form_checkbox__coast">2490 р./мес</p>
-            <p class="reg-form_checkbox__old-coast">3490 р./мес</p>
-            <label for="premium-subscript"></label>
-            <input type="checkbox"
-                   name="premium-subscript"
-                   id="premium-subscript"
-                   hidden>
+          <div class="reg-form_formgroup">
+            <label for="reg-name" class="reg-form_label"></label>
+            <input type="text"
+                   name="reg-name"
+                   id="reg-name"
+                   required
+                   class="reg-form_input"
+                   placeholder="Ваше имя">
           </div>
+          <div class="reg-form_formgroup">
+            <label for="reg-phone" class="reg-form_label"></label>
+            <input type="text"
+                   name="reg-phone"
+                   id="reg-phone"
+                   required
+                   class="reg-form_input"
+                   placeholder="+7 (___)___-__-__">
+          </div>
+          <div class="reg-form_formgroup">
+            <label for="reg-email" class="reg-form_label"></label>
+            <input type="text"
+                   name="reg-email"
+                   id="reg-email"
+                   required
+                   class="reg-form_input"
+                   placeholder="Ваш e-mail">
+          </div>
+          <div class="reg-form_formgroup reg-form_formgroup__child-name">
+            <label for="reg-child-name" class="reg-form_label"></label>
+            <input type="text"
+                   name="reg-child-name"
+                   id="reg-child-name"
+                   required
+                   class="reg-form_input"
+                   placeholder="Имя ребенка">
+          </div>
+          <div class="reg-form_formgroup reg-form_formgroup__child-class">
+            <label for="reg-child-class" class="reg-form_label"></label>
+            <input type="text"
+                   name="reg-child-class"
+                   id="reg-child-class"
+                   required
+                   class="reg-form_input"
+                   placeholder="Класс"
+                   readonly
+                   value="">
+            <ul class="reg-form_formgroup__child-class--classes">
+              <li class="reg-form_formgroup__child-class--class">7</li>
+              <li class="reg-form_formgroup__child-class--class">8</li>
+              <li class="reg-form_formgroup__child-class--class">9</li>
+              <li class="reg-form_formgroup__child-class--class">10</li>
+              <li class="reg-form_formgroup__child-class--class">11</li>
+            </ul>
+          </div>
+          <div class="reg-form_formgroup">
+            <label for="reg-promocode" class="reg-form_label"></label>
+            <input type="text"
+                   name="reg-promocode"
+                   id="reg-promocode"
+                   required
+                   class="reg-form_input"
+                   placeholder="Ввести промокод">
+          </div>
+          <div class="reg-form_formgroup">
+            <a href="#" class="green-btn" id="sbmt-btn">Оплатить регистрацию</a>
+          </div>
+          <div class="reg-form_formgroup">
+            <a href="#" class="white-btn">Получить консультацию</a>
+          </div>
+          <p class="reg-form_conditions">Нажимая на кнопку, я принимаю <a href="#" class="reg-form_conditions__link">условия соглашения</a></p>
+          <div class="reg-form_footer">
+            <p class="reg-form_footer__text">У вас уже есть аккаунт?</p>
+            <a href="#" class="reg-form_footer__sign-in">Войти</a>
+          </div>
+        </form>
+        <div class="registration_mobile-items">
+          <p class="registration_info__item">Занятия ведут преподаватели, сдавшие <span class="note">ЕГЭ на 100 баллов</span> </p>
+          <p class="registration_info__item">Поддержка по решению задач <span class="note">24/7 в Discord и Telegram</span></p>
+          <p class="registration_info__item">Каждую неделю делаем рассылку с решением задач по темам ЕГЭ</p>
         </div>
-        <div class="reg-form_formgroup">
-          <label for="reg-name"></label>
-          <input type="text"
-                 name="reg-name"
-                 id="reg-name"
-                 required>
-        </div>
-        <div class="reg-form_formgroup">
-          <label for="reg-phone"></label>
-          <input type="text"
-                 name="reg-phone"
-                 id="reg-phone"
-                 required>
-        </div>
-        <div class="reg-form_formgroup">
-          <label for="reg-email"></label>
-          <input type="text"
-                 name="reg-email"
-                 id="reg-email"
-                 required>
-        </div>
-        <div class="reg-form_formgroup reg-form_formgroup__child-name">
-          <label for="reg-child-name"></label>
-          <input type="text" 
-                 name="reg-child-name" 
-                 id="reg-child-name" 
-                 required>
-        </div>
-        <div class="reg-form_formgroup reg-form_formgroup__child-class">
-          <label for="reg-child-class"></label>
-          <input type="text" 
-                 name="reg-child-class" 
-                 id="reg-child-class" 
-                 required>
-        </div>
-        <div class="reg-form_formgroup">
-          <label for="reg-promocode"></label>
-          <input type="text" 
-                 name="reg-promocode" 
-                 id="reg-promocode" 
-                 required>
-        </div>
-        <div class="reg-form_formgroup">
-          <a href="#" class="green-btn">Оплатить регистрацию</a>
-        </div>
-        <div class="reg-form_formgroup">
-          <a href="#" class="white-btn">Получить консультацию</a>
-        </div>
-        <p class="reg-form_conditions">Нажимая на кнопку, я принимаю <a href="#" class="reg-form_conditions__link">условия соглашения</a></p>
-        <div class="reg-form_footer">
-          <p class="reg-form_footer__text">У вас уже есть аккаунт?</p>
-          <a href="#" class="reg-form_footer__sign-in">Войти</a>
-        </div>
-      </form>
+      </div>
     </div>
-    <img src="" alt="img" class="registration_bg">
   </main>
 
   <footer class="footer">
@@ -154,6 +188,9 @@
       </div>
     </div>
   </footer>
-
+  <script src="https://code.jquery.com/jquery-3.5.1.js"
+          integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+          crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/imask"></script>
 </body>
 </html>

@@ -166,10 +166,11 @@
     &__btn-note {
       font-size: 11px;
       text-align: center;
-      color: $grey-color;
+      color: rgba(0, 0, 0, 0.9);
 
       &--link {
         color: $purple-color;
+        text-decoration: underline;
       }
     }
   }

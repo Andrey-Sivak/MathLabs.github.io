@@ -76,23 +76,24 @@
       color: $purple-color;
     }
 
-    &.active &__caption {
+    /*&.active &__caption {
       margin-bottom: 30px;
 
       @include mobile {
         margin-bottom: 15px;
       }
-    }
+    }*/
 
     &__text {
-      display: none;
-      opacity: 0;
-      transition: all ease-in .3s;
+      transition: .3s;
       max-width: 89%;
       font-size: 18px;
       line-height: 26px;
       color: rgba(0, 0, 0, 0.9);
       font-weight: 400;
+      overflow: auto;
+      padding-top: 0;
+      max-height: 0;
 
       @include mobile {
         font-size: 15px;
@@ -100,8 +101,15 @@
     }
 
     &.active &__text {
-      display: block;
-      opacity: 1;
+      max-height: 1000px;
+
+      @include mobile {
+        padding-top: 15px;
+      }
+    }
+
+    &.active &__caption {
+      margin-bottom: 30px;
     }
   }
 

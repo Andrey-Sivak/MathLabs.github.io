@@ -47,7 +47,8 @@
     }
 
     @include mobile {
-      max-width: 100%;
+      max-width: 500px;
+      width: 100%;
       padding: 30px 23px 30px 30px;
     }
 
@@ -86,8 +87,9 @@
       position: relative;
 
       @include mobile {
-        font-size: 10px;
-        line-height: 13px;
+        font-size: 14px;
+        line-height: 125%;
+        padding: 8px 0;
       }
 
       &:before {
@@ -102,9 +104,9 @@
         background-repeat: no-repeat;
 
         @include mobile {
-          width: 8.4px;
-          height: 8.4px;
-          left: -20px;
+          width: 15px;
+          height: 15px;
+          left: -23px;
         }
       }
 
@@ -112,8 +114,8 @@
         background-image: url("../img/check-icon.svg");
 
         @include mobile {
-          width: 12px;
-          height: 8px;
+          width: 17px;
+          height: 13px;
         }
       }
 
@@ -227,12 +229,15 @@
     margin: 0 auto;
     padding: 15px 0;
     border-radius: 50px;
+    font-weight: 600;
+    font-size: 18px;
 
     @include mobile {
-      width: 202px;
-      font-size: 12px;
-      line-height: 12px;
-      padding: 10.5px 0;
+      width: 100%;
+      max-width: 300px;
+      font-size: 16px;
+      line-height: 15px;
+      //padding: 10.5px 0;
     }
   }
 

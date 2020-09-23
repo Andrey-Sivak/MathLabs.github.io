@@ -49,6 +49,7 @@
     margin-bottom: 15px;
     position: relative;
     cursor: pointer;
+    transition: all ease-in .3s;
 
     @include mobile {
       padding: 12px 15px;
@@ -88,11 +89,12 @@
     }
 
     &__hide-content {
-      display: none;
-    }
-
-    &__hide-content {
+      display: flex;
       justify-content: space-between;
+      transition: all ease .5s;
+      overflow: auto;
+      max-height: 0;
+      padding-top: 0;
 
       @include tablet {
         flex-direction: column;
@@ -193,16 +195,17 @@
     }
 
     &.active &__hide-content {
-      display: flex;
+      max-height: 700px;
+      padding-top: 30px;
+
+      @include mobile {
+        padding-top: 15px;
+      }
     }
 
     &.active &__caption{
-      margin-bottom: 30px;
       color: $purple-color;
-
-      @include mobile {
-        margin-bottom: 15px;
-      }
+      padding: 0;
     }
   }
 }

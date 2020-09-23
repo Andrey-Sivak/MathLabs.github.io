@@ -66,7 +66,7 @@
   &_slide {
     width: 100%;
     display: flex;
-    padding: 67px 103px 60px 62px;
+    padding: 20px 10px;
     justify-content: space-between;
     align-items: flex-start;
     border: 4px solid #F1F4FF;
@@ -74,11 +74,11 @@
     border-radius: 8px;
 
     @include tablet {
-      padding: 60px 10px 60px 20px;
+      padding: 20px 10px 10px 20px;
     }
 
     @include mobile {
-      padding: 20px 0 60px 0;
+      padding: 20px 0 20px 0;
       border-top: none;
       border-right: none;
       border-left: none;
@@ -86,37 +86,35 @@
     }
 
     &__img-wrap {
-      flex: 0 0 50%;
+      flex: 0 0 49%;
       display: flex;
-      align-items: flex-start;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      margin-right: 50px;
 
       @include mobile {
         justify-content: center;
         margin-bottom: 36px;
+        margin-right: auto;
+        margin-left: auto;
+        max-height: 250px;
       }
     }
 
     &__img {
-      max-width: 85%;
-      height: auto;
+      width: auto;
+      height: 100%;
       border-radius: 8px;
-      box-shadow: 0 0 16px 0 rgba(0, 0, 0, .5);
+
+      @include mobile {
+        height: unset;
+        max-width: 250px;
+      }
     }
 
     &__content {
-      max-width: 495px;
-    }
-
-    &__caption {
-      margin-bottom: 12px;
-      font-size: 32px;
-      line-height: 32px;
-      font-weight: 600;
-
-      @include tablet {
-        font-size: 20px;
-        line-height: 20px;
-      }
+      max-width: 585px;
     }
 
     %vuz-icon {
@@ -129,18 +127,17 @@
       background-position: center;
     }
 
-    &__position {
-      margin-bottom: 30px;
-      font-weight: 500;
-      line-height: 20px;
-      font-size: 20px;
+    &__caption {
+      margin-bottom: 12px;
+      font-size: 32px;
+      line-height: 32px;
+      font-weight: 600;
       position: relative;
       width: fit-content;
 
       @include tablet {
-        margin-bottom: 21px;
-        font-size: 14px;
-        line-height: 14px;
+        font-size: 20px;
+        line-height: 20px;
       }
 
       &.mgu:after {
@@ -157,6 +154,21 @@
         width: 80px;
         height: 32px;
         right: -90px;
+      }
+    }
+
+    &__position {
+      margin-bottom: 30px;
+      font-weight: 500;
+      line-height: 20px;
+      font-size: 20px;
+      position: relative;
+      width: fit-content;
+
+      @include tablet {
+        margin-bottom: 21px;
+        font-size: 14px;
+        line-height: 14px;
       }
     }
 
@@ -178,10 +190,14 @@
     }
 
     &__results-wrap {
-      width: 100%;
+      width: 85%;
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
+
+      @include tablet {
+        width: 100%;
+      }
     }
 
     &__results-item {
@@ -196,7 +212,7 @@
       color: $grey-color;
       margin-bottom: 5px;
 
-      @include mobile {
+      @include tablet {
         font-size: 11px;
       }
     }
@@ -205,7 +221,7 @@
       font-size: 20px;
       font-weight: 600;
 
-      @include mobile {
+      @include tablet {
         font-size: 14px;
       }
     }

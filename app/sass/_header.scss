@@ -45,10 +45,6 @@
     width: 100%;
     max-width: 718px;
 
-    @include tablet {
-      display: none;
-    }
-
     @include mobile {
       display: none;
     }
@@ -58,6 +54,10 @@
       color: #000;
       border-bottom: 2px solid #fff;
       transition: all ease-in .3s;
+
+      @include tablet {
+        display: none;
+      }
 
       &:hover {
         border-bottom-color: #000;
@@ -79,6 +79,15 @@
       background-size: contain;
       padding: 3px 0;
       color: $black-color;
+    }
+  }
+
+  &_burger {
+    display: none;
+    margin-left: 24px;
+
+    @include tablet {
+      display: block;
     }
   }
 }

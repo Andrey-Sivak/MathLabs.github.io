@@ -20,11 +20,14 @@
       <a href="#" class="white-btn">Вернуться на главную</a>
     </div>
     <div class="header_right">
-      <a href="#" class="simple-btn">Получить консультацию</a>
+      <a href="#" class="simple-btn" id="open-modal">Получить консультацию</a>
       <a href="tel:\\+74994904467" class="header_right__phone">+7 (499) 490-44-67</a>
       <a href="#" class="purple-btn">Записаться</a>
       <a href="#" class="header_right__login-btn">Войти</a>
     </div>
+    <span class="header_burger">
+      <img src="./dist/img/Humburger.svg" alt="img" class="header_burger-img">
+    </span>
   </header>
 
   <main>
@@ -32,7 +35,7 @@
       <div class="container">
         <h1 class="main-offer_caption">Самая нужная подписка для успешной подготовки к ЕГЭ</h1>
         <p class="main-offer_subcaption">Подготовка от преподавателей, которые сдали ЕГЭ на 100 баллов</p>
-        <a href="#" class="green-btn">Выбрать подписку</a>
+        <a href="#" class="green-btn" id="to-subscription">Выбрать подписку</a>
         <img class="main-offer_img" src="./dist/img/main-offer-img.svg" alt="img">
       </div>
     </section>
@@ -42,9 +45,9 @@
       <p>Во время занятий мы пройдем <span class="note">темы по алгебре и геометрии</span>, которые наиболее часто встречаются в ЕГЭ и являются приоритетными для сдачи экзамена на высокий балл.</p>
     </section>
 
-    <section class="subscription">
-      <p class="section-caption">Выберите вариант подписки</p>
+    <section class="subscription" id="subscription">
       <div class="container">
+        <p class="section-caption">Выберите вариант подписки</p>
         <div class="subscription_wrap">
           <div class="subscription_case subscription_basic">
             <p class="base-caption">Базовая</p>
@@ -128,7 +131,7 @@
             <div class="how-learning_stage__img-wrap">
               <img src="./dist/img/how-learn-1.svg" alt="icon" class="how-learning_stage__img">
             </div>
-            <p class="how-learning_stage__text">Все ученики разделяются на <span class="note">мини-группы</span> (до 8 человек) по уровню знаний.</p>
+            <p class="how-learning_stage__text">Все ученики делятся на <span class="note">мини-группы</span> (до 8 человек) по уровню знаний.</p>
           </div>
           <div class="how-learning_stage">
             <div class="how-learning_stage__img-wrap">
@@ -140,13 +143,13 @@
             <div class="how-learning_stage__img-wrap">
               <img src="./dist/img/how-learn-3.svg" alt="icon" class="how-learning_stage__img">
             </div>
-            <p class="how-learning_stage__text">Проводим тестирования с <span class="note">проверками задач</span> и разбором ошибок.</p>
+            <p class="how-learning_stage__text">Проводим тестирования с <span class="note">проверкой задач</span> и разбором ошибок.</p>
           </div>
           <div class="how-learning_stage">
             <div class="how-learning_stage__img-wrap">
               <img src="./dist/img/how-learn-4.svg" alt="icon" class="how-learning_stage__img">
             </div>
-            <p class="how-learning_stage__text">Каждую третюю субботу месяца <span class="note">4 часа решаем задачи</span> на пройденные темы без остановки.</p>
+            <p class="how-learning_stage__text">Каждую третью субботу месяца <span class="note">4 часа решаем задачи</span> на пройденные темы без остановки.</p>
           </div>
         </div>
         <div class="how-learning_counter">
@@ -175,13 +178,16 @@
               <img src="./dist/img/Nina.jpg" alt="img" class="personal_slide__img">
             </div>
             <div class="personal_slide__content">
-              <p class="personal_slide__caption">Каплоухая Нина</p>
-              <p class="personal_slide__position mfti">МФТИ. Физтех-школа прикладной математики и информатики</p>
-              <p class="personal_slide__text">Спациалист по разбору задач в нашей команде. Нина подбирает ученикам MathLabs самые интересные задачи и прикладывает все усилия к их развитию. Кроме этого, Нина занимается анализом данных</p>
-              <p class="personal_slide__text">Нина не только сдала ЕГЭ на 100 баллов, но и стала победителем олимпиад "Ломоносов" и "Межвузовской математической олимпиады", а также призером олимпиад "Покори Воробьевы горы" и "МФТИ"</p>
+              <p class="personal_slide__caption mfti">Каплоухая Нина</p>
+              <p class="personal_slide__position">МФТИ. Физтех-школа прикладной математики и информатики</p>
+              <p class="personal_slide__text">Спациалист по разбору задач в нашей команде. Нина подбирает ученикам MathLabs самые интересные задачи и прикладывает все усилия к их развитию. Кроме этого, Нина занимается анализом данных. Нина не только сдала ЕГЭ на 100 баллов, но и стала победителем олимпиад "Ломоносов" и "Межвузовской математической олимпиады", а также призером олимпиад "Покори Воробьевы горы" и "МФТИ"</p>
               <div class="personal_slide__results-wrap">
                 <div class="personal_slide__results-item">
                   <p class="personal_slide__results-name">ЕГЭ по математике</p>
+                  <p class="personal_slide__results-value">100 из 100 баллов</p>
+                </div>
+                <div class="personal_slide__results-item">
+                  <p class="personal_slide__results-name">Дополнительный экзамен</p>
                   <p class="personal_slide__results-value">100 из 100 баллов</p>
                 </div>
               </div>
@@ -207,11 +213,11 @@
           </div>
           <div class="personal_slide">
             <div class="personal_slide__img-wrap">
-              <img src="./dist/img/person.png" alt="img" class="personal_slide__img">
+              <img src="./dist/img/Albert.jpg" alt="img" class="personal_slide__img">
             </div>
             <div class="personal_slide__content">
-              <p class="personal_slide__caption">Альберт Горяев</p>
-              <p class="personal_slide__position mgu">Механико-математический факультет МГУ</p>
+              <p class="personal_slide__caption mgu">Альберт Горяев</p>
+              <p class="personal_slide__position">Механико-математический факультет МГУ</p>
               <p class="personal_slide__text">Сын ученого, который занимается вопросами космического излучения в РАН. Альберт любит математику так сильно, что берет книги по функциональному анализу даже на встречи с друзьями.</p>
               <p class="personal_slide__text">Подготовил ряд школьников, которые поступили в ряд ведущих лицеев и математических школ Москвы.</p>
               <div class="personal_slide__results-wrap">
@@ -224,47 +230,11 @@
                   <p class="personal_slide__results-value">100 из 100 баллов</p>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="personal_slide">
-            <div class="personal_slide__img-wrap">
-              <img src="./dist/img/person.png" alt="img" class="personal_slide__img">
-            </div>
-            <div class="personal_slide__content">
-              <p class="personal_slide__caption">Альберт Горяев</p>
-              <p class="personal_slide__position mgu">Механико-математический факультет МГУ</p>
-              <p class="personal_slide__text">Сын ученого, который занимается вопросами космического излучения в РАН. Альберт любит математику так сильно, что берет книги по функциональному анализу даже на встречи с друзьями.</p>
-              <p class="personal_slide__text">Подготовил ряд школьников, которые поступили в ряд ведущих лицеев и математических школ Москвы.</p>
-              <div class="personal_slide__results-wrap">
-                <div class="personal_slide__results-item">
-                  <p class="personal_slide__results-name">ЕГЭ по математике</p>
-                  <p class="personal_slide__results-value">100 из 100 баллов</p>
-                </div>
-                <div class="personal_slide__results-item">
-                  <p class="personal_slide__results-name">Дополнительный экзамен МГУ</p>
-                  <p class="personal_slide__results-value">100 из 100 баллов</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="personal_slide">
-            <div class="personal_slide__img-wrap">
-              <img src="./dist/img/person.png" alt="img" class="personal_slide__img">
-            </div>
-            <div class="personal_slide__content">
-              <p class="personal_slide__caption">Альберт Горяев</p>
-              <p class="personal_slide__position mgu">Механико-математический факультет МГУ</p>
-              <p class="personal_slide__text">Сын ученого, который занимается вопросами космического излучения в РАН. Альберт любит математику так сильно, что берет книги по функциональному анализу даже на встречи с друзьями.</p>
-              <p class="personal_slide__text">Подготовил ряд школьников, которые поступили в ряд ведущих лицеев и математических школ Москвы.</p>
-              <div class="personal_slide__results-wrap">
-                <div class="personal_slide__results-item">
-                  <p class="personal_slide__results-name">ЕГЭ по математике</p>
-                  <p class="personal_slide__results-value">100 из 100 баллов</p>
-                </div>
-                <div class="personal_slide__results-item">
-                  <p class="personal_slide__results-name">Дополнительный экзамен МГУ</p>
-                  <p class="personal_slide__results-value">100 из 100 баллов</p>
-                </div>
+              <div class="personal_slide__olympiads">
+                <p class="personal_slide__olympiad">
+                  <img src="./dist/img/win.svg" alt="icon">
+                  <span>Победитель олимпиады "Росатом"</span>
+                </p>
               </div>
             </div>
           </div>
@@ -278,7 +248,7 @@
         <div class="why-now_content">
           <p class="why-now_caption">Почему важно начать готовиться прямо сейчас?</p>
           <p class="why-now_text">Не будем голословными. Мы за вас все посчитали. Каждый дополнительный балл на экзамене оставляет позади 23 737 школьников, которые являются претендентами на бюджетные места.</p>
-          <p class="why-now_text">Зная эту статистику несложно понять, что успешная сдача экзаменов является очень конкурентной борьбой за поступление в лучшие ВУЗы! Это отличная мотивация начать готовиться к экзаменам прямо сейчас!</p>
+          <p class="why-now_text">Именно поэтому мы рекомендуем серьезно отнестись к подготовке, проявлять усердие на занятиях и не бояться задавать вопросы нашим преподавателям. В свою очередь мы приложим все усилия, чтобы наши ученики сдали ЕГЭ на самые высокие баллы.</p>
           <a href="#" class="green-btn">Оформить подписку</a>
         </div>
       </div>
@@ -382,7 +352,7 @@
       <img src="./dist/img/form-img1.png" alt="img" class="main-form_img1">
       <img src="./dist/img/form-img2.png" alt="img" class="main-form_img2">
       <div class="container">
-        <p class="section-caption">Правда улучшатся результаты? Правда!</p>
+        <p class="section-caption">Мой результат на ЕГЭ точно улучшится! Конечно да!</p>
         <p class="main-form_subcaption">Оставьте ваши данные и мы отправим вам пример бесплатных разборов заданий по ЕГЭ</p>
         <form action="#" class="main-form_form">
           <div class="main-form_form__form-group">
@@ -480,7 +450,7 @@
           integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
           crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script src="https://unpkg.com/imask"></script>
 
 </body>
 </html>

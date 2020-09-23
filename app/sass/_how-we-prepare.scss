@@ -5,8 +5,11 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    opacity: 0;
     margin-top: 50px;
+
+    &:not(:first-child) {
+      opacity: 0;
+    }
 
     @include mobile {
       flex-direction: column;
