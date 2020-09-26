@@ -1045,17 +1045,10 @@
     width: 100%;
     padding: 30px;
     cursor: pointer;
-    position: relative;
-    /*&.active &__caption {
-      margin-bottom: 30px;
-
-      @include mobile {
-        margin-bottom: 15px;
-      }
-    }*/ }
+    position: relative; }
     @media (max-width: 760px) {
       .q-a_item {
-        padding: 12px 15px; } }
+        padding: 12px 35px 12px 15px; } }
     .q-a_item:after {
       position: absolute;
       content: '';
@@ -1068,7 +1061,7 @@
       right: 30px; }
       @media (max-width: 760px) {
         .q-a_item:after {
-          top: 20px;
+          top: 15px;
           right: 15px; } }
     .q-a_item.active:after {
       background-image: url("../img/top-arr.svg"); }

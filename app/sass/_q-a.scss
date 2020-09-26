@@ -29,7 +29,7 @@
     position: relative;
 
     @include mobile {
-      padding: 12px 15px;
+      padding: 12px 35px 12px 15px;
     }
 
     &:after {
@@ -44,7 +44,7 @@
       right: 30px;
 
       @include mobile {
-        top: 20px;
+        top: 15px;
         right: 15px;
       }
     }
@@ -75,14 +75,6 @@
     &:hover &__caption {
       color: $purple-color;
     }
-
-    /*&.active &__caption {
-      margin-bottom: 30px;
-
-      @include mobile {
-        margin-bottom: 15px;
-      }
-    }*/
 
     &__text {
       transition: .3s;
