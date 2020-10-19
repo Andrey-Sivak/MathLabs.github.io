@@ -130,6 +130,10 @@
       }
     }
   }
+
+  & .footer {
+    background-color: $deep-grey-color;
+  }
 }
 
 .prepare-page {
@@ -203,9 +207,5 @@
         }
       }
     }
-  }
-
-  & .footer {
-    background-color: $deep-grey-color;
   }
 }

@@ -1,0 +1,117 @@
+.white-page {
+  background-image: url("../img/scene-bg.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: initial;
+
+  @include tablet {
+    background-size: 80%;
+    background-position: right 17%;
+  }
+
+  @include mobile {
+    background-size: 100%;
+    background-position: right 25%;
+  }
+  
+  & .header_left-link {
+    color: $black-color;
+  }
+
+  & .main-section {
+    margin-top: 96px;
+    margin-bottom: 120px;
+
+    @include tablet{
+      margin-top: 84px;
+    }
+
+    @include mobile {
+      margin-top: 58px;
+    }
+
+    &__main-block {
+      max-width: 580px;
+      margin-bottom: 120px;
+      text-align: center;
+
+      @include mobile{
+        margin-bottom: 380px;
+      }
+    }
+
+    &__caption {
+      font-weight: 800;
+      font-size: 60px;
+      line-height: 120%;
+      color: $black-color;
+      margin-bottom: 32px;
+      max-width: 495px;
+
+      @include tablet {
+        font-size: 50px;
+      }
+
+      @include mobile {
+        font-size: 30px;
+        line-height: 36px;
+        margin-bottom: 24px;
+      }
+    }
+
+    &__note {
+      max-width: 416px;
+      margin-bottom: 50px;
+      font-weight: 500;
+      color: rgba(18, 11, 51, 0.7);
+      line-height: 120%;
+      font-size: 20px;
+
+      @include mobile {
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+
+    & .simple-form {
+      max-width: 546px;
+      margin: 0;
+
+      &_input {
+        width: 338px;
+        background: rgba(100, 75, 236, 0.1);
+        border-radius: 8px;
+        padding: 16px;
+        font-size: 16px;
+        line-height: 16px;
+
+        @include mobile {
+          width: 100%;
+        }
+
+        &::placeholder {
+          color: rgba(20, 29, 48, 0.7);
+        }
+      }
+
+      &_btn {
+        width: 190px;
+        padding: 12px;
+
+        @include mobile {
+          width: 100%;
+          padding: 18px 0;
+        }
+      }
+    }
+
+    & .cards {
+
+      & .card {
+        color: rgba(20, 29, 48, 0.7);
+        background-color: #fff;
+        border: 4px solid #F1F4FF;
+      }
+    }
+  }
+}
