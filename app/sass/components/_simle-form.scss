@@ -1,0 +1,41 @@
+.simple-form {
+  max-width: 670px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+
+  &_label {
+    display: none;
+  }
+
+  &_input {
+    background-color: $deep-grey-color;
+    width: 424px;
+    padding: 16px 24px;
+    border-radius: 100px;
+    display: block;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 24px;
+    opacity: .9;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+
+  &_btn {
+    width: 228px;
+    background-color: $gold-color;
+    color: $deep-grey-color;
+    text-transform: capitalize;
+    font-size: 20px;
+    line-height: 24px;
+    border: none;
+    font-weight: 700;
+    border-radius: 100px;
+    padding: 16px 0;
+  }
+}

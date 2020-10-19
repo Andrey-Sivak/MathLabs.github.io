@@ -1,0 +1,126 @@
+.black-page {
+  font-family: $muller;
+  background-color: #000;
+  background-image: url("../img/prepare-black-bg.png");
+  background-repeat: repeat;
+
+  & .main-section {
+    margin-top: 75px;
+    margin-bottom: 60px;
+
+    &__main-block {
+      margin: 0 auto 120px;
+      max-width: 860px;
+      text-align: center;
+      position: relative;
+    }
+
+    &__caption {
+      color: $gold-color;
+      font-size: 70px;
+      line-height: 120%;
+      margin-top: 24px;
+      margin-bottom: 16px;
+    }
+
+    &__note {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 40px;
+    }
+
+    &__btn {
+      width: 437px;
+      padding: 28px 0 28px 42px;
+      text-align: center;
+      border-radius: 100px;
+      margin: 60px auto 0;
+      color: $deep-grey-color;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 1;
+      background-image: url("../img/medal-min-black.svg");
+      background-size: 32px;
+      background-position: 24px center;
+      background-repeat: no-repeat;
+
+      &:hover {
+        background-image: url("../img/medal-min-gold.svg");
+      }
+    }
+  }
+
+  & .header {
+    
+    & a {
+      color: #fff;
+    }
+
+    .gold-btn {
+      width: 153px;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 1;
+      padding: 16px 0;
+      border-radius: 50px;
+      text-align: center;
+      color: $deep-grey-color;
+
+      &:hover {
+        color: $gold-color;
+      }
+    }
+  }
+}
+
+.prepare-page {
+
+  & .header {
+
+    &_right {
+      max-width: 413px;
+    }
+
+    &_left {
+      max-width: 500px;
+
+      &-link {
+        letter-spacing: 0.02em;
+        font-size: 16px;
+        line-height: 150%;
+        font-weight: 400;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &-icon--link {
+        position: relative;
+
+        &:after {
+          content: 'Бесплатное занятие';
+          position: absolute;
+          z-index: 2;
+          padding: 2px 6px;
+          color: $deep-grey-color;
+          background-color: $gold-color;
+          bottom: 13px;
+          left: 14px;
+          border-radius: 15px;
+          width: 135px;
+          font-weight: 700;
+          letter-spacing: 0.02em;
+          font-size: 12px;
+          line-height: 24px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  & .footer {
+    background-color: $deep-grey-color;
+  }
+}
