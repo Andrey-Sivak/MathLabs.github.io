@@ -216,18 +216,17 @@
   }
 
   & .main-section {
+    position: relative;
 
     &__main-block {
-      position: relative;
 
       &_soc-networks {
         position: absolute;
-        right: calc( ( 1216px - 860px ) / -2 );
-        top: 50%;
-        transform: translateY(-50%);
+        right: 0;
+        top: 106px;
 
         @include small-pc {
-          right: -30px;
+          right: 20px;
         }
 
         @include tablet {
@@ -283,6 +282,19 @@
           margin-bottom: 0;
           margin-right: 24px;
         }
+      }
+    }
+  }
+
+  & .footer {
+
+    &_top__soc-icon--link {
+      width: 50px;
+      height: 50px;
+
+      & img {
+        width: 100%;
+        height: 100%;
       }
     }
   }
