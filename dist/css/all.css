@@ -84,7 +84,7 @@
         align-items: center; } }
     @media (max-width: 760px) {
       .header_burger {
-        margin-left: 0; } }
+        margin-left: 15px; } }
 
 .main-offer {
   background-color: #644BEC;
@@ -1765,6 +1765,10 @@
       .prepare-page .header_right {
         display: flex;
         justify-content: flex-end; } }
+    @media (max-width: 760px) {
+      .prepare-page .header_right {
+        max-width: unset;
+        width: unset; } }
   .prepare-page .header_left {
     max-width: 500px; }
     .prepare-page .header_left-link {
@@ -1908,7 +1912,8 @@
     font-size: 18px;
     color: rgba(255, 255, 255, 0.7);
     line-height: 24px;
-    opacity: .9; }
+    opacity: .9;
+    font-family: "Muller"; }
     @media (max-width: 760px) {
       .simple-form_input {
         width: 100%;
@@ -1917,7 +1922,8 @@
         font-size: 16px;
         line-height: 16px; } }
     .simple-form_input::placeholder {
-      color: rgba(255, 255, 255, 0.7); }
+      color: rgba(255, 255, 255, 0.7);
+      font-family: "Muller"; }
   .simple-form_btn {
     width: 228px;
     background-color: #FFD54E;

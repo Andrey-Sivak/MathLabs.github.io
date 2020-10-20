@@ -162,6 +162,11 @@
         display: flex;
         justify-content: flex-end;
       }
+
+      @include mobile {
+        max-width: unset;
+        width: unset;
+      }
     }
 
     &_left {

@@ -28,6 +28,7 @@
     color: rgba(255, 255, 255, 0.7);
     line-height: 24px;
     opacity: .9;
+    font-family: $muller;
 
     @include mobile {
       width: 100%;
@@ -39,6 +40,7 @@
 
     &::placeholder {
       color: rgba(255, 255, 255, 0.7);
+      font-family: $muller;
     }
   }
 
