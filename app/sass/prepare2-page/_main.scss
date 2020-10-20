@@ -33,10 +33,10 @@
     &__main-block {
       max-width: 580px;
       margin-bottom: 120px;
-      text-align: center;
 
       @include mobile{
         margin-bottom: 380px;
+        text-align: center;
       }
     }
 
@@ -46,10 +46,10 @@
       line-height: 120%;
       color: $black-color;
       margin-bottom: 32px;
-      max-width: 495px;
 
       @include tablet {
         font-size: 50px;
+        max-width: 495px;
       }
 
       @include mobile {
@@ -78,6 +78,7 @@
       margin: 0;
 
       &_input {
+        color: $black-color;
         width: 338px;
         background: rgba(100, 75, 236, 0.1);
         border-radius: 8px;

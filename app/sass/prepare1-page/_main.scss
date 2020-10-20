@@ -139,6 +139,7 @@
 .prepare-page {
 
   & .header {
+    padding-top: 24px;
 
     &_logo {
 
@@ -192,7 +193,7 @@
           content: 'Бесплатное занятие';
           position: absolute;
           z-index: 2;
-          padding: 2px 6px;
+          padding: 0 6px;
           color: $deep-grey-color;
           background-color: $gold-color;
           bottom: 13px;

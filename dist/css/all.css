@@ -79,7 +79,9 @@
     margin-left: 24px; }
     @media (max-width: 1175px) {
       .header_burger {
-        display: block; } }
+        display: flex;
+        justify-content: center;
+        align-items: center; } }
     @media (max-width: 760px) {
       .header_burger {
         margin-left: 0; } }
@@ -1749,54 +1751,53 @@
   .black-page .footer {
     background-color: #323232; }
 
-@media (max-width: 760px) {
-  .prepare-page .header_logo {
-    width: 79px; } }
-
-@media (max-width: 760px) {
-  .prepare-page .header_logo img {
-    width: 100%; } }
-
-.prepare-page .header_right {
-  max-width: 413px; }
-  @media (max-width: 1175px) {
-    .prepare-page .header_right {
-      display: flex;
-      justify-content: flex-end; } }
-
-.prepare-page .header_left {
-  max-width: 500px; }
-  .prepare-page .header_left-link {
-    letter-spacing: 0.02em;
-    font-size: 16px;
-    line-height: 150%;
-    font-weight: 400; }
-    .prepare-page .header_left-link:hover {
-      text-decoration: underline; }
+.prepare-page .header {
+  padding-top: 24px; }
+  @media (max-width: 760px) {
+    .prepare-page .header_logo {
+      width: 79px; } }
+  @media (max-width: 760px) {
+    .prepare-page .header_logo img {
+      width: 100%; } }
+  .prepare-page .header_right {
+    max-width: 413px; }
     @media (max-width: 1175px) {
-      .prepare-page .header_left-link {
-        display: none; } }
-  .prepare-page .header_left-icon--link {
-    position: relative; }
-    @media (max-width: 1175px) {
-      .prepare-page .header_left-icon--link {
-        display: none; } }
-    .prepare-page .header_left-icon--link:after {
-      content: 'Бесплатное занятие';
-      position: absolute;
-      z-index: 2;
-      padding: 2px 6px;
-      color: #323232;
-      background-color: #FFD54E;
-      bottom: 13px;
-      left: 14px;
-      border-radius: 15px;
-      width: 135px;
-      font-weight: 700;
+      .prepare-page .header_right {
+        display: flex;
+        justify-content: flex-end; } }
+  .prepare-page .header_left {
+    max-width: 500px; }
+    .prepare-page .header_left-link {
       letter-spacing: 0.02em;
-      font-size: 12px;
-      line-height: 24px;
-      text-align: center; }
+      font-size: 16px;
+      line-height: 150%;
+      font-weight: 400; }
+      .prepare-page .header_left-link:hover {
+        text-decoration: underline; }
+      @media (max-width: 1175px) {
+        .prepare-page .header_left-link {
+          display: none; } }
+    .prepare-page .header_left-icon--link {
+      position: relative; }
+      @media (max-width: 1175px) {
+        .prepare-page .header_left-icon--link {
+          display: none; } }
+      .prepare-page .header_left-icon--link:after {
+        content: 'Бесплатное занятие';
+        position: absolute;
+        z-index: 2;
+        padding: 0 6px;
+        color: #323232;
+        background-color: #FFD54E;
+        bottom: 13px;
+        left: 14px;
+        border-radius: 15px;
+        width: 135px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        font-size: 12px;
+        line-height: 24px;
+        text-align: center; }
 
 .white-page {
   background-image: url("../img/scene-bg.svg");
@@ -1824,21 +1825,21 @@
         margin-top: 58px; } }
     .white-page .main-section__main-block {
       max-width: 580px;
-      margin-bottom: 120px;
-      text-align: center; }
+      margin-bottom: 120px; }
       @media (max-width: 760px) {
         .white-page .main-section__main-block {
-          margin-bottom: 380px; } }
+          margin-bottom: 380px;
+          text-align: center; } }
     .white-page .main-section__caption {
       font-weight: 800;
       font-size: 60px;
       line-height: 120%;
       color: #141D30;
-      margin-bottom: 32px;
-      max-width: 495px; }
+      margin-bottom: 32px; }
       @media (max-width: 1175px) {
         .white-page .main-section__caption {
-          font-size: 50px; } }
+          font-size: 50px;
+          max-width: 495px; } }
       @media (max-width: 760px) {
         .white-page .main-section__caption {
           font-size: 30px;
@@ -1859,6 +1860,7 @@
       max-width: 546px;
       margin: 0; }
       .white-page .main-section .simple-form_input {
+        color: #141D30;
         width: 338px;
         background: rgba(100, 75, 236, 0.1);
         border-radius: 8px;
@@ -2011,7 +2013,8 @@ body {
 .gold-btn, .white-btn, .simple-btn, .purple-btn, .green-btn {
   display: block;
   transition: all ease-in .3s;
-  cursor: pointer; }
+  cursor: pointer;
+  font-family: "Muller"; }
 
 .gold-btn {
   color: #323232;
