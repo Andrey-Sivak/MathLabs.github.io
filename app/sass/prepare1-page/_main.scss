@@ -75,7 +75,7 @@
     }
 
     &__btn {
-      width: 437px;
+      width: 300px;
       padding: 28px 0 28px 42px;
       text-align: center;
       border-radius: 100px;
@@ -86,12 +86,8 @@
       line-height: 1;
       background-image: url("../img/medal-min-black.svg");
       background-size: 32px;
-      background-position: 24px center;
+      background-position: 40px center;
       background-repeat: no-repeat;
-
-      &:hover {
-        background-image: url("../img/medal-min-gold.svg");
-      }
 
       @include mobile {
         width: 100%;
@@ -118,10 +114,6 @@
       border-radius: 50px;
       text-align: center;
       color: $deep-grey-color;
-
-      &:hover {
-        color: $gold-color;
-      }
 
       @include mobile {
         width: 130px;

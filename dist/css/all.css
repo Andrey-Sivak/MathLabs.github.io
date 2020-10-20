@@ -1708,7 +1708,7 @@
           font-size: 14px;
           line-height: 140%; } }
     .black-page .main-section__btn {
-      width: 437px;
+      width: 300px;
       padding: 28px 0 28px 42px;
       text-align: center;
       border-radius: 100px;
@@ -1719,10 +1719,8 @@
       line-height: 1;
       background-image: url("../img/medal-min-black.svg");
       background-size: 32px;
-      background-position: 24px center;
+      background-position: 40px center;
       background-repeat: no-repeat; }
-      .black-page .main-section__btn:hover {
-        background-image: url("../img/medal-min-gold.svg"); }
       @media (max-width: 760px) {
         .black-page .main-section__btn {
           width: 100%;
@@ -1741,8 +1739,6 @@
     border-radius: 50px;
     text-align: center;
     color: #323232; }
-    .black-page .header .gold-btn:hover {
-      color: #FFD54E; }
     @media (max-width: 760px) {
       .black-page .header .gold-btn {
         width: 130px;
@@ -1939,6 +1935,15 @@
           .white-page .main-section .simple-form_btn {
             width: 100%;
             padding: 18px 0; } }
+    .white-page .main-section__btn {
+      width: 300px;
+      padding: 15px 0 15px;
+      font-weight: 700;
+      font-size: 24px;
+      margin: 50px auto 0;
+      text-align: center;
+      border-radius: 100px;
+      letter-spacing: .01em; }
     .white-page .main-section .cards .card {
       color: rgba(20, 29, 48, 0.7);
       background-color: #fff;
@@ -2083,9 +2088,8 @@ body {
   border: 1px solid #323232;
   background-color: #FFD54E; }
   .gold-btn:hover {
-    border-color: #FFD54E;
-    background-color: #323232;
-    color: #FFD54E; }
+    border-color: #fdc111;
+    background-color: #fdc111; }
 
 .white-btn {
   color: #644BEC;
