@@ -6,6 +6,27 @@ import {Modal} from "./modalWindow";
 
 window.addEventListener('load', function () {
 
+    function selectClass() {
+        const select = document.querySelector('#select');
+        if (!select) {
+            return;
+        }
+
+        const hideContent = select.getElementsByClassName('hide')[0];
+
+        select.addEventListener('click', () => {
+            hideContent.classList.toggle('active');
+        });
+
+        hideContent.addEventListener('click', (e) => {
+            const val = select.getElementsByClassName('value')[0];
+            const target = e.target;
+            val.innerHTML = target.innerHTML;
+        })
+    }
+
+    selectClass();
+
     checkboxes('reg-form_checkbox', 'active');
 
     function slider( sliderClass ) {
