@@ -1,0 +1,39 @@
+$deep-purple-color: #3A3768;
+
+.intensive {
+
+  .main-offer {
+    background-image: url("../img/intensive-first-section-bg.svg");
+    color: $deep-purple-color;
+
+    .purple-btn {
+      width: 330px;
+      text-align: center;
+      display: block;
+      border-radius: 55px;
+      padding: 16px 0;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    &_img-wrap {
+      position: absolute;
+      top: -40px;
+      right: 88px;
+      background-image: url("../img/Ellipse-orange.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 430px;
+      height: 440px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &_img {
+      position: relative;
+      top: unset;
+      right: unset;
+    }
+  }
+}
