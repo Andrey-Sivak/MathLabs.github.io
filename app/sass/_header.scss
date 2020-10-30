@@ -80,6 +80,33 @@
       padding: 3px 0;
       color: $black-color;
     }
+
+    &__login-in {
+      display: flex;
+      align-items: center;
+
+      &_account {
+        display: block;
+        width: 32px;
+        height: 32px;
+        background-image: url("../img/Account-in.svg");
+      }
+
+      &_out {
+        display: block;
+        width: 16px;
+        height: 16px;
+        background-image: url("../img/Account-out.svg");
+      }
+      
+      &_text {
+        color: #fff;
+        margin: 0 19px;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        font-size: 14px;
+      }
+    }
   }
 
   &_burger {
@@ -94,6 +121,27 @@
 
     @include mobile {
       margin-left: 15px;
+    }
+  }
+
+  &.finish {
+    .header_right {
+      @include mobile {
+        display: block;
+      }
+
+      &__login-in {
+        @include mobile {
+          justify-content: flex-end;
+        }
+
+        &_text,
+        &_out {
+          @include mobile {
+            display: none;
+          }
+        }
+      }
     }
   }
 }

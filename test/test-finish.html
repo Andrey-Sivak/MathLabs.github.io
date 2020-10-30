@@ -10,7 +10,7 @@
 </head>
 <body class="black-page test">
 
-<header class="container header">
+<header class="container header finish">
   <div class="header_left">
     <a href="#" class="header_logo">
       <img src="../dist/img/white-logo.svg" alt="MathLabs logotype" class="header_logo__img">
@@ -18,43 +18,43 @@
     <a href="#" class="header-transparent-btn"><span>Вернуться на главную</span></a>
   </div>
   <div class="header_right">
-    <a href="tel:\\+74994904467" class="header_right__phone">+7 (499) 490-44-67</a>
-    <a href="#" class="wh-btn">Записаться</a>
-    <a href="#" class="header_right__login-btn">Войти</a>
+    <a href="tel:+74994904467" class="header_right__phone">+7 (499) 490-44-67</a>
+    <div class="header_right__login-in">
+      <a href="#" class="header_right__login-in_account" title="Константин"></a>
+      <p class="header_right__login-in_text">Привет, Константин!</p>
+      <a href="#" class="header_right__login-in_out" title="Выйти"></a>
+    </div>
   </div>
   <span class="header_burger">
       <img src="../dist/img/Humburger-white.svg" alt="img" class="header_burger-img">
     </span>
 </header>
 
-<main class="start">
+<main>
 
   <section class="main-section container">
     <div class="main-section__main-block">
-      <figure class="main-section__medal">
-        <img src="../dist/img/test-img-caption.png" alt="img" class="main-section__medal_img">
-      </figure>
-      <h2 class="main-section__caption">Перейди на сторону математичеких знаний</h2>
-      <p class="main-section__note">Хотите получить бесплатное занятие с MathLabs? Приготовьтесь к тесту, который определит ваш уровень джедайства!
-        <span>Ответь на все задачи и получи бесплатное занятие</span></p>
+      <h2 class="main-section__caption">Вы отлично <br>справились!</h2>
     </div>
-    <form action="#" class="test-form test-form600">
-      <p class="test-form_caption">В каком классе вы учитесь?</p>
-      <div class="test-form_formgroup">
-        <div class="test-form_input select" id="select">
-          <p class="value">Класс</p>
-          <div class="hide">
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-            <p>5</p>
-            <p>6</p>
-          </div>
+    <form action="#" class="test-form test-form600" id="complete-test">
+      <p class="test-form_title">Вы верно ответили на 4 задания из 5! <br>Неплохо для начала математического пути!</p>
+      <p class="test-form_text">Хотите подарить другу бесплатное занятие? Расскажите о тесте и сражайтесь вместе на стороне математических знаний!</p>
+      <div class="soc-networks">
+        <div class="soc-networks_icons">
+          <a href="#" class="soc-networks_icon">
+            <img src="../dist/img/telegramm-gold.svg" alt="icon" class="soc-networks_icon-img">
+          </a>
+          <a href="#" class="soc-networks_icon">
+            <img src="../dist/img/watsapp-gold.svg" alt="icon" class="soc-networks_icon-img">
+          </a>
+          <a href="#" class="soc-networks_icon">
+            <img src="../dist/img/instagramm-gold.svg" alt="icon" class="soc-networks_icon-img">
+          </a>
+          <a href="#" class="soc-networks_icon">
+            <img src="../dist/img/Messenger-gold.svg" alt="icon" class="soc-networks_icon-img">
+          </a>
         </div>
-      </div>
-      <div class="test-form_formgroup">
-        <button id="start-test"><a href="./test-question1.html">Начать тест</a></button>
+        <a href="./test-start.html" class="again">Сыграть еще раз</a>
       </div>
     </form>
   </section>

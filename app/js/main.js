@@ -18,10 +18,20 @@ window.addEventListener('load', function () {
             hideContent.classList.toggle('active');
         });
 
+
+        const val = select.getElementsByClassName('value')[0];
+
         hideContent.addEventListener('click', (e) => {
-            const val = select.getElementsByClassName('value')[0];
             const target = e.target;
             val.innerHTML = target.innerHTML;
+        });
+
+        const nextBtn = document.getElementById('start-test');
+
+        nextBtn.addEventListener('click', (e) => {
+            if (val.innerHTML === 'Класс') {
+                e.preventDefault();
+            }
         })
     }
 
@@ -132,6 +142,27 @@ window.addEventListener('load', function () {
         });
 
         validation.init();
+    }
+
+    const testForm = document.getElementById('complete-test');
+
+    if (testForm) {
+        const validation = new Validation({
+            submitBtn: 'complete-test-submit',
+            name: 'name',
+            phone: 'phone',
+            email: 'email',
+        });
+
+        validation.init();
+
+        const btn = document.getElementById('complete-test-submit');
+        btn.addEventListener('click', function (e) {
+           const link = this.querySelector('a').getAttribute('href');
+           if ( validation.init() ) {
+               window.location.href = link;
+           }
+        });
     }
 
     function modalWindow() {

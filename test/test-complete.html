@@ -27,34 +27,59 @@
     </span>
 </header>
 
-<main class="start">
+<main>
 
   <section class="main-section container">
     <div class="main-section__main-block">
-      <figure class="main-section__medal">
-        <img src="../dist/img/test-img-caption.png" alt="img" class="main-section__medal_img">
-      </figure>
-      <h2 class="main-section__caption">Перейди на сторону математичеких знаний</h2>
-      <p class="main-section__note">Хотите получить бесплатное занятие с MathLabs? Приготовьтесь к тесту, который определит ваш уровень джедайства!
-        <span>Ответь на все задачи и получи бесплатное занятие</span></p>
+      <h2 class="main-section__caption">Вы получили бесплатное занятие!</h2>
     </div>
-    <form action="#" class="test-form test-form600">
-      <p class="test-form_caption">В каком классе вы учитесь?</p>
-      <div class="test-form_formgroup">
-        <div class="test-form_input select" id="select">
-          <p class="value">Класс</p>
-          <div class="hide">
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-            <p>5</p>
-            <p>6</p>
-          </div>
+    <form action="#" class="test-form" id="complete-test">
+      <p class="test-form_title">Вы верно ответили на 4 задания из 5! <br>Неплохо для начала математического пути!</p>
+      <p class="test-form_text">Поделитесь результатом с друзьями и учавствуйте в розыгрыше целой недели бесплатных занятий</p>
+      <div class="soc-networks">
+        <div class="soc-networks_icons">
+          <a href="#" class="soc-networks_icon">
+            <img src="../dist/img/telegramm-gold.svg" alt="icon" class="soc-networks_icon-img">
+          </a>
+          <a href="#" class="soc-networks_icon">
+            <img src="../dist/img/watsapp-gold.svg" alt="icon" class="soc-networks_icon-img">
+          </a>
+          <a href="#" class="soc-networks_icon">
+            <img src="../dist/img/instagramm-gold.svg" alt="icon" class="soc-networks_icon-img">
+          </a>
+          <a href="#" class="soc-networks_icon">
+            <img src="../dist/img/Messenger-gold.svg" alt="icon" class="soc-networks_icon-img">
+          </a>
         </div>
+        <a href="./test-start.html" class="again">Сыграть еще раз</a>
       </div>
       <div class="test-form_formgroup">
-        <button id="start-test"><a href="./test-question1.html">Начать тест</a></button>
+        <input name="name"
+               id="name"
+               type="text"
+               class="test-form_input"
+               placeholder="Имя ученика">
+        <label for="name"></label>
+      </div>
+      <div class="test-form_formgroup">
+        <input name="phone"
+               id="phone"
+               type="text"
+               class="test-form_input"
+               placeholder="+7 (___)___-__-__">
+        <label for="phone"></label>
+      </div>
+      <div class="test-form_formgroup">
+        <input name="email"
+               id="email"
+               type="text"
+               class="test-form_input"
+               placeholder="Ваш e-mail">
+        <label for="email"></label>
+      </div>
+      <div class="test-form_formgroup">
+        <button id="complete-test-submit"><a href="./test-finish.html">Начать занятия</a></button>
+        <p class="test-form_notice">Нажимая на кнопку, я принимаю <a href="#">условия соглашения</a></p>
       </div>
     </form>
   </section>
