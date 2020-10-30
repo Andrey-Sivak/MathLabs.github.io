@@ -2033,11 +2033,13 @@
 
 .test main {
   max-width: 804px;
-  margin: 100px auto 160px; }
+  margin: 50px auto 160px; }
   @media (max-width: 760px) {
     .test main {
       margin-top: 56px;
       margin-bottom: 0; } }
+  .test main .main-section {
+    margin-top: 0; }
 
 .test .main-section__main-block {
   margin-bottom: 0; }
@@ -2140,7 +2142,8 @@
           margin-top: 24px;
           font-size: 20px; } }
       .test-form_formgroup button > a {
-        color: inherit; }
+        color: inherit;
+        font-family: "Muller"; }
       .test-form_formgroup button:hover {
         background-color: #fdc111; }
   .test-form_input {
@@ -2277,6 +2280,157 @@
     color: #FFD54E;
     margin-top: -10px;
     margin-bottom: 11px; }
+
+.intensive .main-offer {
+  background-image: url("../img/intensive-first-section-bg.svg");
+  color: #3A3768; }
+  .intensive .main-offer .purple-btn {
+    width: 330px;
+    text-align: center;
+    display: block;
+    border-radius: 55px;
+    padding: 16px 0;
+    font-size: 20px;
+    line-height: 24px; }
+  .intensive .main-offer_img-wrap {
+    position: absolute;
+    top: -40px;
+    right: 88px;
+    background-image: url("../img/Ellipse-orange.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 430px;
+    height: 440px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .intensive .main-offer_img {
+    position: relative;
+    top: unset;
+    right: unset; }
+
+.intensive .second-section {
+  color: #3A3768;
+  padding: 120px 0 170px;
+  background-image: url("../img/intensive-sec-s-bg.svg");
+  background-size: contain;
+  background-position: bottom left;
+  background-repeat: no-repeat; }
+  .intensive .second-section__wrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 60px; }
+  .intensive .second-section__item {
+    width: 31%;
+    margin: 0 10px 60px 10px;
+    text-align: center; }
+    .intensive .second-section__item_img {
+      width: 98px;
+      height: 98px;
+      border-radius: 50%;
+      background-color: #F0EDFE;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 15px; }
+    .intensive .second-section__item_text {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+      text-align: center; }
+      .intensive .second-section__item_text span {
+        font-weight: 700; }
+
+.intensive .third-section {
+  color: #3A3768;
+  display: flex; }
+  .intensive .third-section__img {
+    width: 50%; }
+    .intensive .third-section__img > img {
+      width: 100%;
+      height: 100%; }
+  .intensive .third-section__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    padding-left: 105px;
+    background-image: url("../img/intensive-third-bg.svg");
+    background-size: cover;
+    background-repeat: no-repeat; }
+    .intensive .third-section__content .section-caption {
+      text-align: left;
+      max-width: 515px; }
+  .intensive .third-section__text {
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    max-width: 515px;
+    opacity: .7; }
+    .intensive .third-section__text > span {
+      font-weight: 700; }
+  .intensive .third-section .purple-btn {
+    width: 218px;
+    padding: 18px 0;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700; }
+
+.intensive .four-section {
+  color: #3A3768;
+  padding: 120px 0; }
+  .intensive .four-section__wrap {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%; }
+  .intensive .four-section__item {
+    width: 23.5%; }
+    .intensive .four-section__item_img {
+      margin-bottom: 30px; }
+    .intensive .four-section__item_text {
+      color: #141D30;
+      opacity: .7;
+      font-size: 20px;
+      line-height: 30px; }
+      .intensive .four-section__item_text > span {
+        font-weight: 700; }
+
+.intensive .five-section {
+  color: #3A3768;
+  background-image: url("../img/intensive-five-bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center right;
+  padding-top: 120px;
+  padding-bottom: 144px;
+  margin-bottom: 120px; }
+  .intensive .five-section__content {
+    max-width: 570px; }
+    .intensive .five-section__content .section-caption {
+      text-align: left; }
+  .intensive .five-section__items {
+    margin: 30px 0; }
+  .intensive .five-section__item {
+    margin-bottom: 15px;
+    padding-left: 39px;
+    opacity: .7;
+    font-size: 24px;
+    line-height: 30px;
+    background-image: url("../img/reg-form-check.svg");
+    background-size: 18px;
+    background-repeat: no-repeat;
+    background-position: left center; }
+  .intensive .five-section .purple-btn {
+    padding: 16px 0;
+    text-align: center;
+    width: 344px;
+    border-radius: 55px;
+    font-size: 20px;
+    line-height: 24px; }
 
 .simple-form {
   max-width: 670px;
