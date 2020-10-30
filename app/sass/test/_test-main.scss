@@ -80,11 +80,15 @@
 
   & main {
     max-width: 804px;
-    margin: 100px auto 160px;
+    margin: 50px auto 160px;
 
     @include mobile {
       margin-top: 56px;
       margin-bottom: 0;
+    }
+
+    & .main-section {
+      margin-top: 0;
     }
   }
 
