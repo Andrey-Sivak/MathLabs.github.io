@@ -273,6 +273,7 @@
           transition: all ease-in-out .3s;
           overflow: auto;
           max-height: 0;
+          z-index: 10;
 
           &::-webkit-scrollbar {
             width: 0;

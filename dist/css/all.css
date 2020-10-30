@@ -2180,7 +2180,8 @@
         border-bottom-right-radius: 8px;
         transition: all ease-in-out .3s;
         overflow: auto;
-        max-height: 0; }
+        max-height: 0;
+        z-index: 10; }
         .test-form_input.select .hide::-webkit-scrollbar {
           width: 0; }
         .test-form_input.select .hide p {
