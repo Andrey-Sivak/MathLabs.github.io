@@ -1,0 +1,78 @@
+.intensive {
+  .nine-section {
+    padding: 120px 0;
+    background-image: url("../img/intensive-nine-bg.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: $deep-purple-color;
+    position: relative;
+
+    & .section-caption {
+      text-align: left;
+      max-width: 540px;
+    }
+
+    & .container {
+      display: flex;
+    }
+
+    & .registration_form {
+      padding: 60px 78px;
+    }
+
+    &__content {
+      max-width: 620px;
+      width: 50%;
+    }
+
+    &__text {
+      margin-top: 30px;
+      opacity: .7;
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    &__bg-img {
+      position: absolute;
+      bottom: 0;
+      background-image: url("../img/intensive-nine-elipse.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: bottom center;
+      width: 270px;
+
+      & > figcaption {
+        padding: 12px 0 12px 36px;
+        margin-bottom: 20px;
+        position: relative;
+        width: 233px;
+        color: $purple-color;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: .02em;
+        background-image: url("../img/purple-clock-icon.svg");
+        background-repeat: no-repeat;
+        background-size: 16px;
+        background-position: 10px center;
+        background-color: #C5EAF9;
+        border-radius: 29px;
+
+        &:before {
+          position: absolute;
+          content: '';
+          border: 10px solid transparent;
+          border-top: 10px solid #C5EAF9;
+          border-right: 10px solid #C5EAF9;
+          bottom: -20px;
+          left: 110px;
+        }
+      }
+
+      & > img {
+        margin: 0 auto;
+        display: block;
+      }
+    }
+  }
+}

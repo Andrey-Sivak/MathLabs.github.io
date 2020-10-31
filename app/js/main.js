@@ -39,7 +39,7 @@ window.addEventListener('load', function () {
 
     checkboxes('reg-form_checkbox', 'active');
 
-    function slider( sliderClass ) {
+    function slider( sliderClass, items ) {
 
         if( !document.getElementsByClassName(sliderClass)[0] ) {
             return;
@@ -47,14 +47,18 @@ window.addEventListener('load', function () {
 
         $(`.${sliderClass}`).owlCarousel({
             loop: true,
-            items: 1,
+            items: items,
             dots: false,
             navContainerClass: 'personal_slider__arrows',
-            navClass: ['personal_slider__arr personal_slider__arr-lt;','personal_slider__arr personal_slider__arr-rt;'],
+            navClass: [
+                'personal_slider__arr personal_slider__arr-lt;',
+                'personal_slider__arr personal_slider__arr-rt;'
+            ],
         });
     }
 
-    slider('personal_slider');
+    slider('personal_slider', 1);
+    slider('tasks__slider', 2);
 
     function showHideContent( arrayId ) {
 
@@ -144,8 +148,19 @@ window.addEventListener('load', function () {
         validation.init();
     }
 
-    const testForm = document.getElementById('complete-test');
+    const intensiveForm = document.getElementById('intensive-form');
+    if ( intensiveForm ) {
+        const validation = new Validation({
+            submitBtn: 'sbmt-btn',
+            name: 'reg-name',
+            childClass: 'reg-child-class',
+            phone: 'reg-phone',
+        });
 
+        validation.init();
+    }
+
+    const testForm = document.getElementById('complete-test');
     if (testForm) {
         const validation = new Validation({
             submitBtn: 'complete-test-submit',

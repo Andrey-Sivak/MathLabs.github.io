@@ -81,7 +81,7 @@ function clean() {
 }
 
 function html() {
-	return gulp.src('**/*.html')
+	return gulp.src('*.html')
 		.pipe(browserSync.stream());
 }
 

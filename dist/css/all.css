@@ -565,7 +565,7 @@
       background-repeat: no-repeat;
       background-size: contain;
       cursor: pointer;
-      background-color: #fff;
+      background-color: transparent;
       border: none; }
       .personal_slider__arr:focus {
         outline: none; }
@@ -1574,6 +1574,7 @@
       position: relative;
       border-radius: 8px; }
       .registration_form .reg-form_formgroup .green-btn,
+      .registration_form .reg-form_formgroup .purple-btn,
       .registration_form .reg-form_formgroup .white-btn {
         text-align: center;
         border-radius: 50px;
@@ -1621,6 +1622,8 @@
           border-bottom-right-radius: 8px;
           border-bottom-left-radius: 8px;
           z-index: 5; }
+          .registration_form .reg-form_formgroup__child-class--classes::-webkit-scrollbar {
+            width: 0; }
         .registration_form .reg-form_formgroup__child-class--class {
           padding: 7px 16px;
           font-size: 16px;
@@ -2346,16 +2349,17 @@
   color: #3A3768;
   display: flex; }
   .intensive .third-section__img {
-    width: 50%; }
-    .intensive .third-section__img > img {
-      width: 100%;
-      height: 100%; }
+    width: 50%;
+    background-image: url("../img/back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center; }
   .intensive .third-section__content {
+    padding: 120px 0 120px 105px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 50%;
-    padding-left: 105px;
     background-image: url("../img/intensive-third-bg.svg");
     background-size: cover;
     background-repeat: no-repeat; }
@@ -2408,6 +2412,22 @@
   padding-top: 120px;
   padding-bottom: 144px;
   margin-bottom: 120px; }
+  .intensive .five-section .container {
+    position: relative; }
+  .intensive .five-section__img {
+    position: absolute; }
+    .intensive .five-section__img > img {
+      width: 100%;
+      box-shadow: 0 15px 20px rgba(0, 0, 0, 0.05);
+      border-radius: 16px; }
+  .intensive .five-section__img1 {
+    width: 390px;
+    right: 160px;
+    top: -14px; }
+  .intensive .five-section__img2 {
+    width: 305px;
+    right: 100px;
+    bottom: -37px; }
   .intensive .five-section__content {
     max-width: 570px; }
     .intensive .five-section__content .section-caption {
@@ -2431,6 +2451,200 @@
     border-radius: 55px;
     font-size: 20px;
     line-height: 24px; }
+
+.intensive .seven-section {
+  color: #3A3768;
+  padding: 120px 0;
+  background-image: url("../img/intensive-seven-bg.svg");
+  background-size: cover;
+  background-position: right bottom;
+  background-repeat: no-repeat; }
+  .intensive .seven-section .section-caption {
+    max-width: 720px;
+    margin: 0 auto; }
+  .intensive .seven-section .tasks__slider {
+    margin: 60px 0; }
+  .intensive .seven-section .tasks__slide {
+    padding: 79px 30px 56px;
+    background-color: #fff;
+    margin-left: 20px;
+    position: relative; }
+    .intensive .seven-section .tasks__slide_simple-text {
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 30px; }
+    .intensive .seven-section .tasks__slide_bold-text {
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 700; }
+    .intensive .seven-section .tasks__slide_task-num {
+      position: absolute;
+      top: 30px;
+      left: -10px;
+      background: linear-gradient(270deg, #AF48C9 0%, #644BEC 100%);
+      width: 140px; }
+      .intensive .seven-section .tasks__slide_task-num > span {
+        padding: 6px 0 6px 20px;
+        display: block;
+        color: #fff;
+        width: 100%;
+        font-size: 16px;
+        line-height: 16px;
+        position: relative; }
+        .intensive .seven-section .tasks__slide_task-num > span:before {
+          position: absolute;
+          content: '';
+          border: 5px solid transparent;
+          border-top: 4px solid #7D2B92;
+          border-right: 5px solid #7D2B92;
+          bottom: -9px;
+          left: 0; }
+        .intensive .seven-section .tasks__slide_task-num > span:after {
+          position: absolute;
+          content: '';
+          top: -1px;
+          right: -2px;
+          border: 15px solid transparent;
+          border-right: 15px solid #fff; }
+  .intensive .seven-section .purple-btn {
+    width: 361px;
+    margin: 0 auto;
+    border-radius: 50px;
+    padding: 18px 0;
+    text-align: center;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 700; }
+
+.intensive .eight-section {
+  padding: 120px 0;
+  background-color: #3A3768;
+  background-image: url("../img/intensive-eight-bg.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom right;
+  color: #fff; }
+  .intensive .eight-section .section-caption {
+    position: relative;
+    max-width: 720px;
+    margin: 0 auto; }
+    .intensive .eight-section .section-caption:after {
+      position: absolute;
+      content: '';
+      bottom: -42px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-image: url("../img/flags.svg");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 133px;
+      height: 42px; }
+  .intensive .eight-section__wrap {
+    margin-top: 92px;
+    margin-bottom: 52px;
+    display: flex;
+    justify-content: space-between; }
+  .intensive .eight-section__item {
+    text-align: center; }
+    .intensive .eight-section__item_bold-text {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px; }
+    .intensive .eight-section__item_simple-text {
+      font-weight: 500;
+      opacity: .7;
+      font-size: 14px;
+      line-height: 20px; }
+    .intensive .eight-section__item_img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(90deg, #B659CF 0%, #644BEC 100%);
+      padding: 4px;
+      margin: 10px auto;
+      position: relative; }
+      .intensive .eight-section__item_img > img {
+        width: 100%;
+        border-radius: 50%;
+        position: relative;
+        z-index: 2; }
+    .intensive .eight-section__item:not(:last-of-type) .eight-section__item_img:before {
+      position: absolute;
+      content: '';
+      background: linear-gradient(90deg, #644BEC 0%, #B559CF 100%);
+      height: 3px;
+      width: 170px;
+      right: -150px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1; }
+  .intensive .eight-section .purple-btn {
+    padding: 18px 0;
+    width: 218px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 20px;
+    margin: 0 auto;
+    font-weight: 700; }
+
+.intensive .nine-section {
+  padding: 120px 0;
+  background-image: url("../img/intensive-nine-bg.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #3A3768;
+  position: relative; }
+  .intensive .nine-section .section-caption {
+    text-align: left;
+    max-width: 540px; }
+  .intensive .nine-section .container {
+    display: flex; }
+  .intensive .nine-section .registration_form {
+    padding: 60px 78px; }
+  .intensive .nine-section__content {
+    max-width: 620px;
+    width: 50%; }
+  .intensive .nine-section__text {
+    margin-top: 30px;
+    opacity: .7;
+    font-size: 24px;
+    line-height: 30px; }
+  .intensive .nine-section__bg-img {
+    position: absolute;
+    bottom: 0;
+    background-image: url("../img/intensive-nine-elipse.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom center;
+    width: 270px; }
+    .intensive .nine-section__bg-img > figcaption {
+      padding: 12px 0 12px 36px;
+      margin-bottom: 20px;
+      position: relative;
+      width: 233px;
+      color: #644BEC;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: .02em;
+      background-image: url("../img/purple-clock-icon.svg");
+      background-repeat: no-repeat;
+      background-size: 16px;
+      background-position: 10px center;
+      background-color: #C5EAF9;
+      border-radius: 29px; }
+      .intensive .nine-section__bg-img > figcaption:before {
+        position: absolute;
+        content: '';
+        border: 10px solid transparent;
+        border-top: 10px solid #C5EAF9;
+        border-right: 10px solid #C5EAF9;
+        bottom: -20px;
+        left: 110px; }
+    .intensive .nine-section__bg-img > img {
+      margin: 0 auto;
+      display: block; }
 
 .simple-form {
   max-width: 670px;

@@ -9,6 +9,32 @@
     padding-bottom: 144px;
     margin-bottom: 120px;
 
+    & .container {
+      position: relative;
+    }
+
+    &__img {
+      position: absolute;
+
+      & > img {
+        width: 100%;
+        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.05);
+        border-radius: 16px;
+      }
+    }
+
+    &__img1 {
+      width: 390px;
+      right: 160px;
+      top: -14px;
+    }
+
+    &__img2 {
+      width: 305px;
+      right: 100px;
+      bottom: -37px;
+    }
+
     &__content {
       max-width: 570px;
 

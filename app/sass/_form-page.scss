@@ -298,6 +298,7 @@
         border-radius: 8px;
 
         & .green-btn,
+        & .purple-btn,
         & .white-btn {
           text-align: center;
           border-radius: 50px;
@@ -360,6 +361,10 @@
             border-bottom-right-radius: 8px;
             border-bottom-left-radius: 8px;
             z-index: 5;
+
+            &::-webkit-scrollbar {
+              width: 0;
+            }
           }
 
           &--class {
