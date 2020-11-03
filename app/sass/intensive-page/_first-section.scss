@@ -6,6 +6,10 @@ $deep-purple-color: #3A3768;
     background-image: url("../img/intensive-first-section-bg.svg");
     color: $deep-purple-color;
 
+    @include mobile {
+      padding: 60px 0;
+    }
+
     .purple-btn {
       width: 330px;
       text-align: center;
@@ -28,12 +32,34 @@ $deep-purple-color: #3A3768;
       display: flex;
       justify-content: center;
       align-items: center;
+
+      @include tablet {
+        width: 268px;
+        height: 270px;
+        top: 10px;
+      }
+
+      @include mobile {
+        position: static;
+        margin-top: 20px;
+      }
     }
 
     &_img {
       position: relative;
       top: unset;
       right: unset;
+
+      @include tablet {
+        transform: unset;
+        max-width: 90%;
+      }
+    }
+
+    & .purple-btn {
+      @include mobile {
+        width: 288px;
+      }
     }
   }
 }

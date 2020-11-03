@@ -8,22 +8,62 @@
     color: $deep-purple-color;
     position: relative;
 
+    @include mobile {
+      padding: 60px 0;
+    }
+
     & .section-caption {
       text-align: left;
       max-width: 540px;
+
+      @include tablet {
+        max-width: unset;
+        text-align: center;
+      }
+
+      @include mobile {
+        text-align: left;
+      }
     }
 
     & .container {
       display: flex;
+
+      @include tablet {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
     }
 
     & .registration_form {
       padding: 60px 78px;
+
+      @include tablet {
+        position: relative;
+        z-index: 2;
+      }
+
+      @include mobile {
+        padding: 30px 15px;
+      }
+
+      & .btn {
+        @include mobile {
+          font-size: 18px;
+        }
+      }
     }
 
     &__content {
       max-width: 620px;
       width: 50%;
+
+      @include tablet {
+        max-width: unset;
+        width: 100%;
+      }
     }
 
     &__text {
@@ -31,6 +71,17 @@
       opacity: .7;
       font-size: 24px;
       line-height: 30px;
+
+      @include tablet {
+        margin-bottom: 235px;
+        font-size: 20px;
+      }
+
+      @include mobile {
+        font-size: 16px;
+        text-align: left;
+        margin-bottom: 177px;
+      }
     }
 
     &__bg-img {
@@ -41,6 +92,16 @@
       background-size: contain;
       background-position: bottom center;
       width: 270px;
+
+      @include tablet {
+        bottom: 450px;
+        z-index: 1;
+      }
+
+      @include mobile {
+        width: 216px;
+        bottom: 390px;
+      }
 
       & > figcaption {
         padding: 12px 0 12px 36px;
@@ -58,6 +119,10 @@
         background-color: #C5EAF9;
         border-radius: 29px;
 
+        @include mobile {
+          transform: translateX(-25px);
+        }
+
         &:before {
           position: absolute;
           content: '';
@@ -72,6 +137,10 @@
       & > img {
         margin: 0 auto;
         display: block;
+
+        @include mobile {
+          width: 159px;
+        }
       }
     }
   }

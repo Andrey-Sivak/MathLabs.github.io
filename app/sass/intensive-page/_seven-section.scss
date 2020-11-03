@@ -7,13 +7,31 @@
     background-position: right bottom;
     background-repeat: no-repeat;
 
+    @include tablet {
+      padding: 80px 0;
+    }
+
     .section-caption {
       max-width: 720px;
       margin: 0 auto;
+
+      @include tablet {
+        margin: 0;
+        max-width: 580px;
+        text-align: left;
+      }
     }
 
     .tasks__slider {
       margin: 60px 0;
+
+      @include tablet {
+        margin: 30px 0;
+      }
+
+      @include mobile {
+        margin-top: 60px;
+      }
     }
 
     .tasks__slide {
@@ -21,6 +39,43 @@
       background-color: #fff;
       margin-left: 20px;
       position: relative;
+      flex: 0 0 48%;
+      box-shadow: 0 15px 20px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+
+      &:not(:first-of-type) {
+        margin-top: 20px;
+      }
+
+      @include tablet {
+        flex: 0 0 100%;
+        padding: 80px 30px;
+      }
+
+      @include mobile {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 30px;
+      }
+
+      &_wrap {
+        margin-left: 20px;
+        margin-right: 1px;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-wrap: wrap;
+
+        @include tablet {
+          margin-left: 0;
+          margin-right: 20px;
+        }
+
+        @include mobile {
+          margin-left: 10px;
+        }
+      }
+
 
       &_simple-text {
         font-size: 20px;
@@ -80,6 +135,10 @@
       font-size: 20px;
       line-height: 20px;
       font-weight: 700;
+
+      @include mobile {
+        width: 288px;
+      }
     }
   }
 }

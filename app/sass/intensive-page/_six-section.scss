@@ -1,0 +1,9 @@
+.intensive {
+  .personal {
+    .section-caption {
+      @include tablet {
+        max-width: 400px;
+      }
+    }
+  }
+}
