@@ -67,6 +67,19 @@ body {
   font-family: $muller;
 }
 
+.orange-btn {
+  @extend %button;
+  color: #fff;
+  border: 1px solid $orange-color;
+  background-color: $orange-color;
+
+  &:hover {
+    border-color: $orange-color;
+    background-color: #fff;
+    color: $orange-color;
+  }
+}
+
 .gold-btn {
   @extend %button;
   color: $deep-grey-color;
@@ -88,6 +101,18 @@ body {
   &:hover {
     border-color: #fff;
     background-color: $purple-color;
+    color: #fff;
+  }
+}
+.or-white-btn {
+  @extend %button;
+  color: $orange-color;
+  border: 1px solid $orange-color;
+  background-color: #fff;
+
+  &:hover {
+    border-color: #fff;
+    background-color: $orange-color;
     color: #fff;
   }
 }

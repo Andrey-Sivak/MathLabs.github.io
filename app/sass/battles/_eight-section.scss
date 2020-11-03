@@ -1,0 +1,187 @@
+.battles {
+  .eight-section {
+    padding: 120px 0;
+    background-color: #A166F0;
+    background-image: url("../img/battles-eight-bg-lt.svg"),
+                      url("../img/battles-eight-bg-rt.svg");
+    background-repeat: no-repeat;
+    background-size: initial;
+    background-position: bottom left, bottom right;
+
+    & .section-caption {
+      position: relative;
+      max-width: 720px;
+      margin: 0 auto;
+      color: #fff;
+
+      &:after {
+        position: absolute;
+        content: '';
+        bottom: -42px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-image: url("../img/flags.svg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 133px;
+        height: 42px;
+      }
+    }
+
+    &__wrap {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 92px;
+      width: 100%;
+    }
+
+    &__item {
+      width: 24%;
+      background: #FFFFFF;
+      box-shadow: 0 15px 20px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+      padding: 15px;
+      position: relative;
+
+      &.finish {
+
+        &:after {
+          width: 190px;
+          text-align: center;
+          position: absolute;
+          content: 'этот бой окончен';
+          color: #fff;
+          text-transform: uppercase;
+          font-size: 9px;
+          line-height: 16px;
+          background: #FF2929;
+          border-radius: 2px;
+          transform: rotate(-15deg) translate(-50%, -50%);
+          top: 40%;
+          left: 50%;
+        }
+
+        & .eight-section__item_header,
+        & .eight-section__item_body,
+        & .btn {
+          opacity: .4;
+        }
+      }
+
+      &_header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      &_calendar {
+        display: flex;
+        flex-direction: column;
+        width: 50px;
+        justify-content: center;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      &_month {
+        display: block;
+        width: 100%;
+        background-color: #3DBCB8;
+        color: #fff;
+        padding: 2px 0;
+        text-align: center;
+        font-size: 9px;
+        line-height: 10px;
+        font-weight: 500;
+      }
+
+      &_date {
+        display: block;
+        width: 100%;
+        color: #141D30;
+        padding: 4px 0;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 500;
+      }
+
+      &_info  {
+        margin-left: 15px;
+        font-weight: 500;
+        line-height: 20px;
+        color: #141D30;
+      }
+
+      &_class {
+        font-size: 16px;
+      }
+
+      &_date-time {
+        font-size: 14px;
+        opacity: .7;
+      }
+
+      &_case {
+        display: flex;
+        align-items: center;
+        padding: 15px 0;
+        border-top: 1px solid #F0EDFE;
+
+        & > div {
+          display: flex;
+          flex-direction: column;
+          line-height: 20px;
+          color: #141D30;
+          font-weight: 500;
+
+          & > span {
+            font-size: 11px;
+            opacity: .7;
+            
+            &.green-color {
+              color: #1A9578;
+            }
+
+            &.red-color {
+              color: #FF2929;
+            }
+          }
+
+          & > p {
+            font-size: 16px;
+          }
+        }
+
+        & > figure {
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          padding: 2px;
+          background-color: #C5EAF9;
+          margin-right: 15px;
+
+          & > img {
+            width: 100%;
+          }
+        }
+      }
+
+      & .btn {
+        text-align: center;
+        width: 100%;
+        border-radius: 50px;
+        font-size: 15px;
+        padding: 16px 0;
+        font-weight: 700;
+        line-height: 1;
+
+        &.unable {
+          background-color: #C4C4C4;
+          border-color: #C4C4C4;
+          color: #fff;
+          cursor: initial;
+        }
+      }
+    }
+  }
+}
