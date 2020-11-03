@@ -3,8 +3,16 @@
     background-color: $battle-purple;
     padding-bottom: 0;
 
+    @include mobile {
+      padding-top: 30px;
+    }
+
     &_caption {
       max-width: 675px;
+
+      @include tablet {
+        max-width: 410px;
+      }
     }
 
     & .container {
@@ -13,6 +21,11 @@
       background-size: initial;
       background-position: bottom left;
       padding-bottom: 152px;
+
+      @include tablet {
+        padding-bottom: 80px;
+        position: static;
+      }
     }
 
     &_subcaption {
@@ -33,9 +46,18 @@
       line-height: 24px;
       font-weight: 700;
 
+      @include tablet {
+        display: block;
+      }
+
       &:first-of-type {
         width: 263px;
         margin-right: 15px;
+
+        @include tablet {
+          width: 288px;
+          margin-bottom: 15px;
+        }
       }
 
       &:last-of-type {

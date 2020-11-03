@@ -10,6 +10,16 @@
     color: $deep-purple-color;
     position: relative;
 
+    @include tablet {
+      background-position: 30%;
+    }
+
+    @include mobile {
+      padding: 60px 0;
+      background-position: bottom left, center right;
+      background-size: 50%;
+    }
+
     & .container {
       display: flex;
       flex-direction: column;
@@ -23,6 +33,10 @@
 
     & .registration_form {
       padding: 60px 78px;
+
+      @include mobile {
+        padding: 30px 15px;
+      }
     }
 
     &__content {
@@ -84,6 +98,12 @@
       display: block;
       margin: 30px auto 0;
       width: fit-content;
+    }
+
+    & .reg-form_conditions {
+      @include mobile {
+        text-align: center;
+      }
     }
   }
 }

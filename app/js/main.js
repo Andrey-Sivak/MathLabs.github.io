@@ -39,7 +39,7 @@ window.addEventListener('load', function () {
 
     checkboxes('reg-form_checkbox', 'active');
 
-    function slider( sliderClass, items ) {
+    function slider( sliderClass ) {
 
         if( !document.getElementsByClassName(sliderClass)[0] ) {
             return;
@@ -47,7 +47,7 @@ window.addEventListener('load', function () {
 
         $(`.${sliderClass}`).owlCarousel({
             loop: true,
-            items: items,
+            items: 1,
             dots: false,
             navContainerClass: 'personal_slider__arrows',
             navClass: [
@@ -57,8 +57,8 @@ window.addEventListener('load', function () {
         });
     }
 
-    slider('personal_slider', 1);
-    slider('tasks__slider', 2);
+    slider('personal_slider' );
+    slider('tasks__slider' );
 
     function showHideContent( arrayId ) {
 

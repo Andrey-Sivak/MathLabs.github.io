@@ -13,6 +13,15 @@
     background-repeat: no-repeat;
     background-size: initial;
 
+    @include tablet {
+      padding: 80px 0;
+    }
+
+    @include mobile {
+      padding-top: 60px;
+      padding-bottom: 165px;
+    }
+
     .container {
       max-width: 1010px;
     }
@@ -22,16 +31,52 @@
       line-height: 42px;
       opacity: .7;
       margin: 30px auto 0;
+
+      @include tablet {
+        font-size: 24px;
+        line-height: 34px;
+      }
+
+      @include mobile {
+        text-align: left;
+        font-size: 20px;
+        line-height: 30px;
+      }
     }
 
     &__wrap {
       display: flex;
       margin: 60px 0;
       justify-content: space-between;
+
+      @include tablet {
+        margin: 40px 0;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      @include mobile {
+        margin: 30px 0;
+      }
     }
 
     &__item {
       width: 48%;
+
+      @include tablet {
+        width: 483px;
+      }
+
+      @include mobile {
+        width: 100%;
+        text-align: left;
+      }
+
+      &:not(:last-of-type) {
+        @include tablet {
+          margin-bottom: 40px;
+        }
+      }
 
       &_img {
         margin: 0 auto 20px;
@@ -42,6 +87,11 @@
 
         & > img {
           width: 100%;
+        }
+
+        @include mobile {
+          margin-left: 0;
+          margin-right: 0;
         }
       }
 
@@ -64,6 +114,10 @@
       line-height: 24px;
       font-weight: 700;
       border-radius: 55px;
+
+      @include mobile {
+        width: 288px;
+      }
     }
   }
 }

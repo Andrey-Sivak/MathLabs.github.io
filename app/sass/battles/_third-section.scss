@@ -2,5 +2,33 @@
   .how-we-preparing {
     margin-top: 120px;
     margin-bottom: 120px;
+
+    @include tablet {
+      margin-top: 80px;
+      margin-bottom: 80px;
+    }
+
+    @include mobile {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    &_item {
+
+      &__img-wrap {
+
+        @include tablet {
+          flex: 0 0 30%;
+          margin-right: 20px;
+        }
+
+        & > img {
+
+          @include tablet {
+            width: 100%;
+          }
+        }
+      }
+    }
   }
 }
