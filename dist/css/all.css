@@ -2755,10 +2755,12 @@
         align-items: center;
         justify-content: center;
         margin-bottom: 60px; } }
-    .intensive .eight-section__item_wrap:first-of-type {
-      text-align: right; }
-    .intensive .eight-section__item_wrap:last-of-type {
-      text-align: left; }
+    @media (max-width: 760px) {
+      .intensive .eight-section__item_wrap:first-of-type {
+        text-align: right; } }
+    @media (max-width: 760px) {
+      .intensive .eight-section__item_wrap:last-of-type {
+        text-align: left; } }
     .intensive .eight-section__item_bold-text {
       font-weight: 500;
       font-size: 16px;

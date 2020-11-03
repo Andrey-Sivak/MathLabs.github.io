@@ -64,11 +64,15 @@
       &_wrap {
 
         &:first-of-type {
-          text-align: right;
+          @include mobile {
+            text-align: right;
+          }
         }
 
         &:last-of-type {
-          text-align: left;
+          @include mobile {
+            text-align: left;
+          }
         }
       }
 
