@@ -56,6 +56,7 @@ class ModalWindow {
                 let diff = newVal - self.members;
                 if ( diff > 0 ) {
                     self.createMembersField( newVal );
+                    self.sendFormData();
                 } else if( diff < 0 ) {
                     self.removeMembersField( newVal );
                 }
@@ -67,6 +68,37 @@ class ModalWindow {
                 })
             })
         });
+    }
+
+    slider() {
+        let resize = false;
+        const sliderClass = 'owl-carousel';
+        const wrap = document.getElementById('modal-form');
+        window.addEventListener('load', function (e) {
+            if( document.documentElement.clientWidth < 765 ) {
+                resize = true;
+            }
+        });
+        window.addEventListener('resize', function (e) {
+            if( document.documentElement.clientWidth < 765 && !resize ) {
+                resize = true;
+            }
+
+            if (resize) {
+                wrap.classList.add(sliderClass);
+
+                $('#modal-form').owlCarousel({
+                    loop: true,
+                    items: 1,
+                    dots: true,
+                    navContainerClass: 'personal_slider__arrows',
+                    navClass: [
+                        'personal_slider__arr personal_slider__arr-lt;',
+                        'personal_slider__arr personal_slider__arr-rt;'
+                    ],
+                });
+            }
+        })
     }
 
     removeMembersField( int ) {
@@ -128,16 +160,26 @@ class ModalWindow {
 
     sendFormData() {
         const submitBtn = document.getElementById('modal-btn');
+        const wrap = document.getElementsByClassName('modal-window')[0];
+        const formgroups = wrap.getElementsByClassName('registration_form_item');
+        const names = [];
+        const phones = [];
+        const childClasses = [];
+        for (let i = 1; i <= formgroups.length; i++) {
+            names.push( `${i}-reg-name` );
+            phones.push( `${i}-reg-phone` );
+            childClasses.push( `${i}-reg-child-class` );
+        }
         const self = this;
 
-        /*const validate = new Validation({
+        const validate = new Validation({
             submitBtn: 'modal-btn',
-            name: 'modal-name',
-            phone: 'modal-phone',
-            email: 'modal-email'
+            name: names,
+            phone: phones,
+            childClass: childClasses
         });
 
-        validate.init();*/
+        validate.init();
 
         submitBtn.addEventListener('click', function (e) {
             e.preventDefault();
@@ -195,6 +237,7 @@ class ModalWindow {
     init() {
         this.open();
         this.selectMembersAmount();
+        this.slider();
         this.sendFormData();
     }
 }

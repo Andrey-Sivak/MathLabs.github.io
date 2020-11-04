@@ -11,13 +11,19 @@
   background-color: rgba(0,0,0,0);
   transition: background-color .35s ease-in;
 
+  @include tablet {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
   &-window {
     position: relative;
     padding: 30px;
     margin: 0 auto;
     max-width: 804px;
     width: 100%;
-    height: auto;
+    height: 90vh;
+    overflow-y: scroll;
     background-color: #fff;
     transform: translateY(-200%);
     transition: transform .35s ease-in;
@@ -25,6 +31,10 @@
     & .members {
       display: flex;
       margin-bottom: 30px;
+
+      @include tablet {
+        flex-wrap: wrap;
+      }
 
       &_item {
         background: #F1F4FF;
@@ -38,6 +48,10 @@
         margin-right: 10px;
         transition: all ease-in-out .3s;
         cursor: pointer;
+
+        @include tablet {
+          margin-bottom: 5px;
+        }
 
         &.active,
         &:hover {
@@ -56,11 +70,19 @@
         align-items: center;
         width: 100%;
         margin-bottom: 10px;
+
+        @include mobile {
+          flex-direction: column;
+        }
       }
 
       & .reg-form_formgroup {
         margin-bottom: 0;
         margin-right: 10px;
+
+        @include mobile {
+          margin-bottom: 10px;
+        }
       }
 
       & .num {

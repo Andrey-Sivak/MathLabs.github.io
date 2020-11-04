@@ -229,7 +229,7 @@ window.addEventListener('load', function () {
                 } else {
                     this.classList.add('active');
 
-                    const itemsWrap = document.getElementsByClassName('reg-form_formgroup__child-class--classes')[0];
+                    const itemsWrap = this.getElementsByClassName('reg-form_formgroup__child-class--classes')[0];
                     itemsWrap.addEventListener('click', function (e) {
                         e.preventDefault();
                         const target = e.target;

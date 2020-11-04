@@ -118,9 +118,17 @@ class Validation {
     }
 
     maskPhone( input ) {
-        new IMask( input, {
-            mask: '+{7}(000)000-00-00',
-        });
+        if ( input instanceof Array ) {
+            input.forEach( function (item) {
+                new IMask( item, {
+                    mask: '+{7}(000)000-00-00',
+                });
+            })
+        } else {
+            new IMask( input, {
+                mask: '+{7}(000)000-00-00',
+            });
+        }
     }
 
     checkEmail( input ) {
@@ -216,8 +224,6 @@ class Validation {
         for( const input in this.inputs ) {
             const elem = this.inputs[input];
 
-            console.log(elem);
-
             if( !elem ) {
                 continue;
             }
@@ -242,7 +248,6 @@ class Validation {
         this.maskPhone( this.inputs.phone );
         this.submitBtn.addEventListener('click',  (e) => {
             e.preventDefault();
-            console.log(this.errors);
 
             const warningMessages = document.getElementsByClassName('warning');
             let invalidInputs = document.getElementsByClassName('warn');

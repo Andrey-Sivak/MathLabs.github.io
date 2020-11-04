@@ -2286,6 +2286,26 @@
     margin-top: -10px;
     margin-bottom: 11px; }
 
+.intensive.lidgen .main-offer .registration_form {
+  padding: 0;
+  background-color: unset;
+  max-width: unset;
+  justify-content: flex-start; }
+  .intensive.lidgen .main-offer .registration_form .reg-form_formgroup {
+    width: fit-content;
+    margin-bottom: 0; }
+  .intensive.lidgen .main-offer .registration_form input {
+    background-color: #fff;
+    width: 289px;
+    padding: 19px 16px; }
+  .intensive.lidgen .main-offer .registration_form .purple-btn {
+    width: 289px;
+    margin-left: 20px; }
+    @media (max-width: 760px) {
+      .intensive.lidgen .main-offer .registration_form .purple-btn {
+        margin-left: 0;
+        margin-top: 15px; } }
+
 .intensive .main-offer {
   background-image: url("../img/intensive-first-section-bg.svg");
   color: #3A3768; }
@@ -2329,9 +2349,11 @@
       .intensive .main-offer_img {
         transform: unset;
         max-width: 90%; } }
-  @media (max-width: 760px) {
-    .intensive .main-offer .purple-btn {
-      width: 288px; } }
+  .intensive .main-offer .purple-btn {
+    font-weight: 700; }
+    @media (max-width: 760px) {
+      .intensive .main-offer .purple-btn {
+        width: 288px; } }
 
 .intensive .second-section {
   color: #3A3768;
@@ -2939,6 +2961,35 @@
       @media (max-width: 760px) {
         .intensive .nine-section__bg-img > img {
           width: 159px; } }
+
+.battles.lidgen .main-offer .registration_form {
+  padding: 0;
+  background-color: unset;
+  max-width: unset;
+  justify-content: flex-start; }
+  .battles.lidgen .main-offer .registration_form .reg-form_formgroup {
+    width: fit-content;
+    margin-bottom: 0; }
+  .battles.lidgen .main-offer .registration_form input {
+    background-color: #fff;
+    width: 289px;
+    padding: 19px 16px; }
+  .battles.lidgen .main-offer .registration_form .orange-btn {
+    width: 289px;
+    margin-left: 20px;
+    text-align: center;
+    font-weight: 700;
+    padding: 16px 0;
+    border-radius: 50px;
+    font-size: 20px;
+    line-height: 20px; }
+    @media (max-width: 760px) {
+      .battles.lidgen .main-offer .registration_form .orange-btn {
+        margin-left: 0;
+        margin-top: 15px; } }
+
+.battles.lidgen .second-section {
+  background-color: #FFF6E5; }
 
 .battles .main-offer {
   background-color: #572598;
@@ -3648,19 +3699,27 @@
   right: 0;
   background-color: rgba(0, 0, 0, 0);
   transition: background-color .35s ease-in; }
+  @media (max-width: 1175px) {
+    .modal {
+      padding-left: 16px;
+      padding-right: 16px; } }
   .modal-window {
     position: relative;
     padding: 30px;
     margin: 0 auto;
     max-width: 804px;
     width: 100%;
-    height: auto;
+    height: 90vh;
+    overflow-y: scroll;
     background-color: #fff;
     transform: translateY(-200%);
     transition: transform .35s ease-in; }
     .modal-window .members {
       display: flex;
       margin-bottom: 30px; }
+      @media (max-width: 1175px) {
+        .modal-window .members {
+          flex-wrap: wrap; } }
       .modal-window .members_item {
         background: #F1F4FF;
         border-radius: 4px;
@@ -3673,6 +3732,9 @@
         margin-right: 10px;
         transition: all ease-in-out .3s;
         cursor: pointer; }
+        @media (max-width: 1175px) {
+          .modal-window .members_item {
+            margin-bottom: 5px; } }
         .modal-window .members_item.active, .modal-window .members_item:hover {
           color: #fff;
           background-color: #644BEC; }
@@ -3684,9 +3746,15 @@
         align-items: center;
         width: 100%;
         margin-bottom: 10px; }
+        @media (max-width: 760px) {
+          .modal-window .registration_form_item {
+            flex-direction: column; } }
       .modal-window .registration_form .reg-form_formgroup {
         margin-bottom: 0;
         margin-right: 10px; }
+        @media (max-width: 760px) {
+          .modal-window .registration_form .reg-form_formgroup {
+            margin-bottom: 10px; } }
       .modal-window .registration_form .num {
         background-color: #3DBCB8;
         max-width: 20px;
