@@ -3,6 +3,7 @@
 import {checkboxes} from "./form-page";
 import {Validation} from "./validationClass";
 import {Modal} from "./modalWindow";
+import {ModalWindow} from "./modal"
 
 window.addEventListener('load', function () {
 
@@ -195,34 +196,65 @@ window.addEventListener('load', function () {
 
     modalWindow();
 
-    function childClass() {
-        const elem = document.getElementsByClassName('reg-form_formgroup__child-class')[0];
+    function childClass(wrap) {
+        let elem = null;
+        if( !wrap ) {
+            elem = document.getElementsByClassName('reg-form_formgroup__child-class')[0];
+        } else  {
+            elem = [...wrap.getElementsByClassName('reg-form_formgroup__child-class')];
+        }
+
         if( !elem ) {
             return;
         }
 
-        const input = elem.querySelector('input');
+        if( elem instanceof Array ) {
+            elem.forEach( function (item) {
+                addListener(item);
+            })
+        } else {
+            addListener(elem);
+        }
 
-        elem.addEventListener('click', function (e) {
-            e.preventDefault();
+        function addListener(el) {
 
-            if( this.classList.contains('active') ) {
-                this.classList.remove('active');
+            const input = el.querySelector('input');
 
-            } else {
-                this.classList.add('active');
+            el.addEventListener('click', function (e) {
+                e.preventDefault();
 
-                const itemsWrap = document.getElementsByClassName('reg-form_formgroup__child-class--classes')[0];
-                itemsWrap.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = e.target;
+                if( this.classList.contains('active') ) {
+                    this.classList.remove('active');
 
-                    input.value = target.innerHTML;
-                })
-            }
-        })
+                } else {
+                    this.classList.add('active');
+
+                    const itemsWrap = document.getElementsByClassName('reg-form_formgroup__child-class--classes')[0];
+                    itemsWrap.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = e.target;
+
+                        input.value = target.innerHTML;
+                    })
+                }
+            })
+        }
+
     }
 
     childClass();
+
+    (function registrationTeam() {
+        const modal = new ModalWindow();
+        const btns = [...document.querySelectorAll('.team-registration')];
+
+        btns.forEach( function (item) {
+            item.addEventListener('click', function (e) {
+                e.preventDefault();
+                modal.init();
+                childClass( document.getElementsByClassName('modal-window')[0] );
+            })
+        })
+    })();
 
 });
